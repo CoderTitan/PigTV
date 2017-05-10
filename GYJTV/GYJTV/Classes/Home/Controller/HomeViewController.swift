@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.randomColor()
         setupUI()
     }
     
@@ -24,6 +23,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     fileprivate func setupUI() {
         setupNavigationBar()
+        setupContentView()
     }
     
     private func setupNavigationBar() {
@@ -44,6 +44,33 @@ extension HomeViewController {
         let searchFiled = searchBar.value(forKey: "_searchField") as? UITextField
         searchFiled?.textColor = UIColor.white
     }
+    fileprivate func setupContentView(){
+        //获取数据
+        let homeTypes = loadTitleData()
+        
+        let style = HYTitleStyle()
+        style.isScrollEnable = true
+        let pageFrame = CGRect(x: 0, y: kNavigationBarH + kStatusBarH, width: kScreenWidth, height: kScreenHeight - kNavigationBarH - kStatusBarH - kTabBarH)
+        let titles = homeTypes.map({ $0.title })
+        var childVcs = [AnchorViewController]()
+        for type in homeTypes {
+            let anchorVc = AnchorViewController()
+            anchorVc.homeType = type
+            childVcs.append(anchorVc)
+        }
+        let pageView = HYPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVcs, parentVc: self)
+        view.addSubview(pageView)
+    }
+    fileprivate func loadTitleData() -> [HomeType]{
+        let pathStr = Bundle.main.path(forResource: "types", ofType: "plist")!
+        let dataArray = NSArray(contentsOfFile: pathStr) as! [[String : Any]]
+        var tempArray = [HomeType]()
+        for dic in dataArray {
+            tempArray.append(HomeType(dic: dic))
+        }
+        return tempArray
+    }
+    
 }
 
 // MARK:- 事件监听函数
