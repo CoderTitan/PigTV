@@ -48,7 +48,7 @@ extension HomeViewController {
         //获取数据
         let homeTypes = loadTitleData()
         
-        let style = HYTitleStyle()
+        let style = TQJTitleStyle()
         style.isScrollEnable = true
         let pageFrame = CGRect(x: 0, y: kNavigationBarH + kStatusBarH, width: kScreenWidth, height: kScreenHeight - kNavigationBarH - kStatusBarH - kTabBarH)
         let titles = homeTypes.map({ $0.title })
@@ -58,7 +58,7 @@ extension HomeViewController {
             anchorVc.homeType = type
             childVcs.append(anchorVc)
         }
-        let pageView = HYPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVcs, parentVc: self)
+        let pageView = TQJPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVcs, parentVc: self)
         view.addSubview(pageView)
     }
     fileprivate func loadTitleData() -> [HomeType]{

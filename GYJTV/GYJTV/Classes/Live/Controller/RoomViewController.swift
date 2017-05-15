@@ -1,14 +1,14 @@
 //
-//  LiveViewController.swift
-//  XMGTV
+//  RoomViewController.swift
+//  GYJTV
 //
-//  Created by apple on 16/11/9.
-//  Copyright © 2016年 coderwhy. All rights reserved.
+//  Created by 田全军 on 2017/5/11.
+//  Copyright © 2017年 Quanjun. All rights reserved.
 //
 
 import UIKit
 
-class RoomViewController: UIViewController {
+class RoomViewController: UIViewController ,Emitterable{
     
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
@@ -65,7 +65,9 @@ extension RoomViewController {
         case 3:
             print("点击了更多")
         case 4:
-            print("点击了粒子")
+            sender.isSelected = !sender.isSelected
+            let point = CGPoint(x: sender.center.x, y: view.bounds.height - sender.bounds.height * 0.5)
+            startEmittering(point)
         default:
             fatalError("未处理按钮")
         }

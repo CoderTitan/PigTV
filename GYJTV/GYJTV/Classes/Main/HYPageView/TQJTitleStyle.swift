@@ -1,14 +1,15 @@
 //
-//  HYCustomStyle.swift
-//  HYContentPageView
+//  TQJTitleStyle.swift
+//  GYJTV
 //
-//  Created by xiaomage on 2016/10/27.
-//  Copyright © 2016年 seemygo. All rights reserved.
+//  Created by 田全军 on 2017/5/15.
+//  Copyright © 2017年 Quanjun. All rights reserved.
 //
 
 import UIKit
 
-class HYTitleStyle {
+class TQJTitleStyle: NSObject {
+
     /// 是否是滚动的Title
     var isScrollEnable : Bool = false
     /// 普通Title颜色
@@ -44,4 +45,5 @@ class HYTitleStyle {
     var coverH : CGFloat = 25
     /// 设置圆角大小
     var coverRadius : CGFloat = 12
+
 }
