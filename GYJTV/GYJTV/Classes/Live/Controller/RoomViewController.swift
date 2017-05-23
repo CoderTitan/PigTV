@@ -38,6 +38,7 @@ extension RoomViewController {
         setupBlurView()
     }
     
+    //毛玻璃效果iOS8以后才可以
     fileprivate func setupBlurView() {
         let blur = UIBlurEffect(style: .dark)
         let blurView = UIVisualEffectView(effect: blur)

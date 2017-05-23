@@ -43,6 +43,7 @@
 		6AB9E9591EC9DCCF0034F63B /* TQJPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9581EC9DCCF0034F63B /* TQJPageView.swift */; };
 		6AB9E95D1EC9FADC0034F63B /* TQJCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */; };
 		6AB9E95F1EC9FB110034F63B /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E95E1EC9FB110034F63B /* NibLoadable.swift */; };
+		6AB9E9611ECB453B0034F63B /* TQJPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */; };
 		6AED95281E9FBF8300520537 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED95271E9FBF8300520537 /* UIColor+Extension.swift */; };
 		FE0F01EDAD8030F6DEB34A70 /* Pods_GYJTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		6AB9E9581EC9DCCF0034F63B /* TQJPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageView.swift; sourceTree = "<group>"; };
 		6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJCollectionView.swift; sourceTree = "<group>"; };
 		6AB9E95E1EC9FB110034F63B /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = Protocol/NibLoadable.swift; sourceTree = "<group>"; };
+		6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageCollectionLayout.swift; sourceTree = "<group>"; };
 		6AED95271E9FBF8300520537 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GYJTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C746CA53112EF146A438C182 /* Pods-GYJTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYJTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-GYJTV/Pods-GYJTV.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,27 +196,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6A3760291EC27CEC00E4A7E6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A37602A1EC27CEC00E4A7E6 /* VIew */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIew;
-			sourceTree = "<group>";
-		};
-		6A37602B1EC27CEC00E4A7E6 /* VIewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIewModel;
-			sourceTree = "<group>";
-		};
 		6A37602E1EC27D3D00E4A7E6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +221,7 @@
 				6AB9E9561EC9DC6D0034F63B /* TQJTitleView.swift */,
 				6AB9E9541EC9DB940034F63B /* TQJTitleStyle.swift */,
 				6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */,
+				6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */,
 			);
 			name = TQJPageView;
 			path = HYPageView;
@@ -289,27 +271,6 @@
 				6A37605C1EC27E3F00E4A7E6 /* RankViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		6A3760581EC27E2B00E4A7E6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A3760591EC27E2B00E4A7E6 /* VIew */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIew;
-			sourceTree = "<group>";
-		};
-		6A37605A1EC27E2B00E4A7E6 /* VIewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIewModel;
 			sourceTree = "<group>";
 		};
 		6A37605F1EC27E5E00E4A7E6 /* Controller */ = {
@@ -385,9 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				6A3760261EC27CEC00E4A7E6 /* Controller */,
-				6A3760291EC27CEC00E4A7E6 /* Model */,
-				6A37602A1EC27CEC00E4A7E6 /* VIew */,
-				6A37602B1EC27CEC00E4A7E6 /* VIewModel */,
+				6AB9E9621ED46E290034F63B /* Model */,
+				6AB9E9631ED46E290034F63B /* View */,
+				6AB9E9641ED46E290034F63B /* ViewModel */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -519,9 +480,6 @@
 			isa = PBXGroup;
 			children = (
 				6A3760571EC27E2B00E4A7E6 /* Controller */,
-				6A3760581EC27E2B00E4A7E6 /* Model */,
-				6A3760591EC27E2B00E4A7E6 /* VIew */,
-				6A37605A1EC27E2B00E4A7E6 /* VIewModel */,
 			);
 			path = Rank;
 			sourceTree = "<group>";
@@ -533,6 +491,27 @@
 				6AB9E95E1EC9FB110034F63B /* NibLoadable.swift */,
 			);
 			name = Protocol;
+			sourceTree = "<group>";
+		};
+		6AB9E9621ED46E290034F63B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6AB9E9631ED46E290034F63B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6AB9E9641ED46E290034F63B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6AED95261E9FBF6E00520537 /* Extension */ = {
@@ -766,6 +745,7 @@
 				6AB9E95D1EC9FADC0034F63B /* TQJCollectionView.swift in Sources */,
 				6AB9E9571EC9DC6D0034F63B /* TQJTitleView.swift in Sources */,
 				6A7E9F751EC4BC0A00FB7925 /* RoomViewController.swift in Sources */,
+				6AB9E9611ECB453B0034F63B /* TQJPageCollectionLayout.swift in Sources */,
 				6A7E9F731EC4AEEE00FB7925 /* Emitterable.swift in Sources */,
 				6A37603A1EC27D7100E4A7E6 /* Const.swift in Sources */,
 				6A37604F1EC27E0300E4A7E6 /* HomeViewCell.swift in Sources */,
