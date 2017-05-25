@@ -15,12 +15,16 @@ protocol TQJCollectionViewDateSource : class {
     func pageCollectionView(_ pageCollectionView : TQJCollectionView, _ collectionView : UICollectionView, cellForItemAt indexPath : IndexPath) -> UICollectionViewCell
     
 }
+protocol TQJCollectionViewDelegate : class {
+    func pageCollectionView(_ pageCollectionView : TQJCollectionView, didSelectorItemAt indexPath : IndexPath)
+}
 
 private let kCollectionViewCell = "kCollectionViewCell"
 class TQJCollectionView: UIView {
 
     // MARK: 代理
     weak var dataSource : TQJCollectionViewDateSource?
+    weak var delegate : TQJCollectionViewDelegate?
     // MARK: 页面属性
     fileprivate var style : TQJTitleStyle
     fileprivate var titles : [String]
@@ -28,7 +32,7 @@ class TQJCollectionView: UIView {
     fileprivate var layout : TQJPageCollectionLayout
     fileprivate var collectionView : UICollectionView!
     fileprivate var pageControl : UIPageControl!
-    fileprivate var titleView : TQJTitleView
+    fileprivate var titleView : TQJTitleView!
     fileprivate var sourceIndexPath : IndexPath = IndexPath(item: 0, section: 0)
     
     init(frame: CGRect, style : TQJTitleStyle, titles : [String], isTitleInTop : Bool, layout : TQJPageCollectionLayout) {
@@ -54,15 +58,14 @@ extension TQJCollectionView{
         titleView = TQJTitleView(frame: CGRect(x: 0, y: titleViewY, width: bounds.width, height: style.titleHeight), titles: titles, style: style)
         titleView.delegate = self
         addSubview(titleView)
-        titleView.backgroundColor = UIColor.randomColor()
         
         //2.创建pageControl
         let pageControllHeight : CGFloat = 20
         let pageControlY = isTitleInTop ? bounds.height - pageControllHeight : bounds.height - pageControllHeight - style.titleHeight
-        let pageControl = UIPageControl(frame: CGRect(x: 0, y: pageControlY , width: bounds.width, height: pageControllHeight))
-        pageControl.numberOfPages = 5
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: pageControlY , width: bounds.width, height: pageControllHeight))
+        pageControl.pageIndicatorTintColor = UIColor.lightGray
+        pageControl.currentPageIndicatorTintColor = UIColor.orange
         addSubview(pageControl)
-        pageControl.backgroundColor = UIColor.randomColor()
 
         //3.创建collectionView
         let collectionViewY = isTitleInTop ? style.titleHeight : 0
@@ -70,9 +73,10 @@ extension TQJCollectionView{
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCollectionViewCell)
         addSubview(collectionView)
-        collectionView.backgroundColor = UIColor.randomColor()
+        pageControl.backgroundColor = collectionView.backgroundColor
     }
 }
 
@@ -83,6 +87,10 @@ extension TQJCollectionView{
     }
     func register(nib : UINib, identifier : String) {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+    }
+    
+    func reloadData() {
+        collectionView.reloadData()
     }
 }
 
@@ -132,6 +140,9 @@ extension TQJCollectionView : UICollectionViewDelegate{
         }
         // 3.根据indexPath设置pageControl
         pageControl.currentPage = indexPath.item / (layout.cols * layout.rows)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.pageCollectionView(self, didSelectorItemAt: indexPath)
     }
 }
 

@@ -44,6 +44,23 @@
 		6AB9E95D1EC9FADC0034F63B /* TQJCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */; };
 		6AB9E95F1EC9FB110034F63B /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E95E1EC9FB110034F63B /* NibLoadable.swift */; };
 		6AB9E9611ECB453B0034F63B /* TQJPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */; };
+		6AB9E96C1ED46F470034F63B /* ChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E96B1ED46F470034F63B /* ChatToolsView.swift */; };
+		6AB9E96E1ED46F4E0034F63B /* ChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9E96D1ED46F4E0034F63B /* ChatToolsView.xib */; };
+		6AB9E9701ED5DC800034F63B /* EmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E96F1ED5DC800034F63B /* EmotionView.swift */; };
+		6AB9E9731ED708D90034F63B /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9E9711ED708D90034F63B /* QHNormalEmotionSort.plist */; };
+		6AB9E9741ED708D90034F63B /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9E9721ED708D90034F63B /* QHSohuGifSort.plist */; };
+		6AB9E9791ED709D40034F63B /* EmotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9751ED709D40034F63B /* EmotionModel.swift */; };
+		6AB9E97A1ED709D40034F63B /* EmotionPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9761ED709D40034F63B /* EmotionPackages.swift */; };
+		6AB9E97B1ED709D40034F63B /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9771ED709D40034F63B /* GiftModel.swift */; };
+		6AB9E97C1ED709D40034F63B /* GiftPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9781ED709D40034F63B /* GiftPackages.swift */; };
+		6AB9E97F1ED709ED0034F63B /* EmoticonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E97D1ED709ED0034F63B /* EmoticonViewCell.swift */; };
+		6AB9E9801ED709ED0034F63B /* EmoticonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9E97E1ED709ED0034F63B /* EmoticonViewCell.xib */; };
+		6AB9E9851ED709FE0034F63B /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9811ED709FE0034F63B /* GiftListView.swift */; };
+		6AB9E9861ED709FE0034F63B /* GiftListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9E9821ED709FE0034F63B /* GiftListView.xib */; };
+		6AB9E9871ED709FE0034F63B /* GiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9831ED709FE0034F63B /* GiftViewCell.swift */; };
+		6AB9E9881ED709FE0034F63B /* GiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9E9841ED709FE0034F63B /* GiftViewCell.xib */; };
+		6AB9E98B1ED70A640034F63B /* EmotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9891ED70A640034F63B /* EmotionViewModel.swift */; };
+		6AB9E98C1ED70A640034F63B /* GiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E98A1ED70A640034F63B /* GiftViewModel.swift */; };
 		6AED95281E9FBF8300520537 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED95271E9FBF8300520537 /* UIColor+Extension.swift */; };
 		FE0F01EDAD8030F6DEB34A70 /* Pods_GYJTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +127,23 @@
 		6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJCollectionView.swift; sourceTree = "<group>"; };
 		6AB9E95E1EC9FB110034F63B /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = Protocol/NibLoadable.swift; sourceTree = "<group>"; };
 		6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageCollectionLayout.swift; sourceTree = "<group>"; };
+		6AB9E96B1ED46F470034F63B /* ChatToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToolsView.swift; sourceTree = "<group>"; };
+		6AB9E96D1ED46F4E0034F63B /* ChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolsView.xib; sourceTree = "<group>"; };
+		6AB9E96F1ED5DC800034F63B /* EmotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionView.swift; sourceTree = "<group>"; };
+		6AB9E9711ED708D90034F63B /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
+		6AB9E9721ED708D90034F63B /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
+		6AB9E9751ED709D40034F63B /* EmotionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionModel.swift; sourceTree = "<group>"; };
+		6AB9E9761ED709D40034F63B /* EmotionPackages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionPackages.swift; sourceTree = "<group>"; };
+		6AB9E9771ED709D40034F63B /* GiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
+		6AB9E9781ED709D40034F63B /* GiftPackages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftPackages.swift; sourceTree = "<group>"; };
+		6AB9E97D1ED709ED0034F63B /* EmoticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewCell.swift; sourceTree = "<group>"; };
+		6AB9E97E1ED709ED0034F63B /* EmoticonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewCell.xib; sourceTree = "<group>"; };
+		6AB9E9811ED709FE0034F63B /* GiftListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
+		6AB9E9821ED709FE0034F63B /* GiftListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftListView.xib; sourceTree = "<group>"; };
+		6AB9E9831ED709FE0034F63B /* GiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewCell.swift; sourceTree = "<group>"; };
+		6AB9E9841ED709FE0034F63B /* GiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftViewCell.xib; sourceTree = "<group>"; };
+		6AB9E9891ED70A640034F63B /* EmotionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionViewModel.swift; sourceTree = "<group>"; };
+		6AB9E98A1ED70A640034F63B /* GiftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewModel.swift; sourceTree = "<group>"; };
 		6AED95271E9FBF8300520537 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GYJTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C746CA53112EF146A438C182 /* Pods-GYJTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYJTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-GYJTV/Pods-GYJTV.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +187,8 @@
 		6A37601B1EC27B9600E4A7E6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6AB9E9711ED708D90034F63B /* QHNormalEmotionSort.plist */,
+				6AB9E9721ED708D90034F63B /* QHSohuGifSort.plist */,
 				6A37601C1EC27B9600E4A7E6 /* types.plist */,
 			);
 			path = Resource;
@@ -281,54 +317,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6A3760601EC27E5E00E4A7E6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A3760611EC27E5E00E4A7E6 /* VIew */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIew;
-			sourceTree = "<group>";
-		};
-		6A3760621EC27E5E00E4A7E6 /* VIewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIewModel;
-			sourceTree = "<group>";
-		};
 		6A3760651EC27E7A00E4A7E6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				6A3760691EC27E8300E4A7E6 /* Profile.storyboard */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		6A3760661EC27E7A00E4A7E6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A3760671EC27E7A00E4A7E6 /* VIew */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIew;
-			sourceTree = "<group>";
-		};
-		6A3760681EC27E7A00E4A7E6 /* VIewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIewModel;
 			sourceTree = "<group>";
 		};
 		6A3EAF4E1EA6E58D0069F6E6 /* Base */ = {
@@ -426,9 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				6A37605F1EC27E5E00E4A7E6 /* Controller */,
-				6A3760601EC27E5E00E4A7E6 /* Model */,
-				6A3760611EC27E5E00E4A7E6 /* VIew */,
-				6A3760621EC27E5E00E4A7E6 /* VIewModel */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -469,9 +460,6 @@
 			isa = PBXGroup;
 			children = (
 				6A3760651EC27E7A00E4A7E6 /* Controller */,
-				6A3760661EC27E7A00E4A7E6 /* Model */,
-				6A3760671EC27E7A00E4A7E6 /* VIew */,
-				6A3760681EC27E7A00E4A7E6 /* VIewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -496,6 +484,10 @@
 		6AB9E9621ED46E290034F63B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6AB9E9751ED709D40034F63B /* EmotionModel.swift */,
+				6AB9E9761ED709D40034F63B /* EmotionPackages.swift */,
+				6AB9E9771ED709D40034F63B /* GiftModel.swift */,
+				6AB9E9781ED709D40034F63B /* GiftPackages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -503,6 +495,12 @@
 		6AB9E9631ED46E290034F63B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6AB9E9651ED46F250034F63B /* ChatContentVIew */,
+				6AB9E9661ED46F250034F63B /* ChatView */,
+				6AB9E9671ED46F250034F63B /* GiftAnimation */,
+				6AB9E9681ED46F250034F63B /* GiftView */,
+				6AB9E9691ED46F250034F63B /* MoreView */,
+				6AB9E96A1ED46F250034F63B /* ShareView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -510,8 +508,61 @@
 		6AB9E9641ED46E290034F63B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6AB9E9891ED70A640034F63B /* EmotionViewModel.swift */,
+				6AB9E98A1ED70A640034F63B /* GiftViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6AB9E9651ED46F250034F63B /* ChatContentVIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChatContentVIew;
+			sourceTree = "<group>";
+		};
+		6AB9E9661ED46F250034F63B /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				6AB9E96B1ED46F470034F63B /* ChatToolsView.swift */,
+				6AB9E96D1ED46F4E0034F63B /* ChatToolsView.xib */,
+				6AB9E96F1ED5DC800034F63B /* EmotionView.swift */,
+				6AB9E97D1ED709ED0034F63B /* EmoticonViewCell.swift */,
+				6AB9E97E1ED709ED0034F63B /* EmoticonViewCell.xib */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		6AB9E9671ED46F250034F63B /* GiftAnimation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GiftAnimation;
+			sourceTree = "<group>";
+		};
+		6AB9E9681ED46F250034F63B /* GiftView */ = {
+			isa = PBXGroup;
+			children = (
+				6AB9E9811ED709FE0034F63B /* GiftListView.swift */,
+				6AB9E9821ED709FE0034F63B /* GiftListView.xib */,
+				6AB9E9831ED709FE0034F63B /* GiftViewCell.swift */,
+				6AB9E9841ED709FE0034F63B /* GiftViewCell.xib */,
+			);
+			path = GiftView;
+			sourceTree = "<group>";
+		};
+		6AB9E9691ED46F250034F63B /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MoreView;
+			sourceTree = "<group>";
+		};
+		6AB9E96A1ED46F250034F63B /* ShareView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShareView;
 			sourceTree = "<group>";
 		};
 		6AED95261E9FBF6E00520537 /* Extension */ = {
@@ -641,13 +692,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB9E96E1ED46F4E0034F63B /* ChatToolsView.xib in Resources */,
+				6AB9E9741ED708D90034F63B /* QHSohuGifSort.plist in Resources */,
 				6A3760551EC27E1300E4A7E6 /* Home.storyboard in Resources */,
 				6A37602D1EC27CEC00E4A7E6 /* RoomViewController.xib in Resources */,
 				6A37606A1EC27E8300E4A7E6 /* Profile.storyboard in Resources */,
 				6A37605D1EC27E3F00E4A7E6 /* Rank.storyboard in Resources */,
+				6AB9E9881ED709FE0034F63B /* GiftViewCell.xib in Resources */,
+				6AB9E9861ED709FE0034F63B /* GiftListView.xib in Resources */,
 				6A37601D1EC27B9600E4A7E6 /* types.plist in Resources */,
 				6A5C10611E9E99540090446B /* LaunchScreen.storyboard in Resources */,
 				6A3760501EC27E0300E4A7E6 /* HomeViewCell.xib in Resources */,
+				6AB9E9731ED708D90034F63B /* QHNormalEmotionSort.plist in Resources */,
+				6AB9E9801ED709ED0034F63B /* EmoticonViewCell.xib in Resources */,
 				6A5C105E1E9E99540090446B /* Assets.xcassets in Resources */,
 				6A5C105C1E9E99540090446B /* Main.storyboard in Resources */,
 				6A3760641EC27E6600E4A7E6 /* Discover.storyboard in Resources */,
@@ -729,21 +786,32 @@
 				6A3760321EC27D3D00E4A7E6 /* NetworkTools.swift in Sources */,
 				6A5C10971E9E99880090446B /* XMGNavigationController.swift in Sources */,
 				6A37604C1EC27E0300E4A7E6 /* AnchorViewController.swift in Sources */,
+				6AB9E9701ED5DC800034F63B /* EmotionView.swift in Sources */,
+				6AB9E96C1ED46F470034F63B /* ChatToolsView.swift in Sources */,
 				6A3760561EC27E1300E4A7E6 /* HomeViewController.swift in Sources */,
 				6A3760251EC27CC400E4A7E6 /* BaseModel.swift in Sources */,
 				6A5C10961E9E99880090446B /* MainViewController.swift in Sources */,
 				6AB9E9551EC9DB940034F63B /* TQJTitleStyle.swift in Sources */,
 				6A3760521EC27E0300E4A7E6 /* WaterfallLayout.swift in Sources */,
+				6AB9E97B1ED709D40034F63B /* GiftModel.swift in Sources */,
 				6A37604E1EC27E0300E4A7E6 /* HomeType.swift in Sources */,
+				6AB9E97A1ED709D40034F63B /* EmotionPackages.swift in Sources */,
 				6AB9E94F1EC9DB5E0034F63B /* TQJContentView.swift in Sources */,
+				6AB9E97F1ED709ED0034F63B /* EmoticonViewCell.swift in Sources */,
 				6A37605E1EC27E3F00E4A7E6 /* RankViewController.swift in Sources */,
 				6A37604D1EC27E0300E4A7E6 /* AnchorModel.swift in Sources */,
+				6AB9E9791ED709D40034F63B /* EmotionModel.swift in Sources */,
 				6AED95281E9FBF8300520537 /* UIColor+Extension.swift in Sources */,
+				6AB9E98C1ED70A640034F63B /* GiftViewModel.swift in Sources */,
+				6AB9E9851ED709FE0034F63B /* GiftListView.swift in Sources */,
 				6A5C10571E9E99540090446B /* AppDelegate.swift in Sources */,
+				6AB9E97C1ED709D40034F63B /* GiftPackages.swift in Sources */,
 				6A3760401EC27DA200E4A7E6 /* NSDate-Extension.swift in Sources */,
 				6AB9E95F1EC9FB110034F63B /* NibLoadable.swift in Sources */,
 				6AB9E95D1EC9FADC0034F63B /* TQJCollectionView.swift in Sources */,
+				6AB9E98B1ED70A640034F63B /* EmotionViewModel.swift in Sources */,
 				6AB9E9571EC9DC6D0034F63B /* TQJTitleView.swift in Sources */,
+				6AB9E9871ED709FE0034F63B /* GiftViewCell.swift in Sources */,
 				6A7E9F751EC4BC0A00FB7925 /* RoomViewController.swift in Sources */,
 				6AB9E9611ECB453B0034F63B /* TQJPageCollectionLayout.swift in Sources */,
 				6A7E9F731EC4AEEE00FB7925 /* Emitterable.swift in Sources */,

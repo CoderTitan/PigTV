@@ -21,8 +21,10 @@ let kTabBarH : CGFloat = 49
 
 
 // MARK: 接口数据
+/**首页列表数据*/
 let kHomeDataListUrl : String = "http://qf.56.com/home/v4/moreAnchor.ios"
-
+/**直播间礼物列表*/
+let kRoomGiftListUrl : String = "http://qf.56.com/pay/v4/giftList.ios"
 
 
 
