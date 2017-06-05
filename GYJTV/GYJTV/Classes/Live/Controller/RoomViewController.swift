@@ -10,6 +10,8 @@ import UIKit
 
 private let kChatToolsViewHeight : CGFloat = 44
 private let kGiftlistViewHeight : CGFloat = kScreenHeight * 0.43
+private let kChatContentViewHeight : CGFloat = 200
+
 
 class RoomViewController: UIViewController ,Emitterable{
     
@@ -17,15 +19,28 @@ class RoomViewController: UIViewController ,Emitterable{
     @IBOutlet weak var bgImageView: UIImageView!
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
+    fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
+    fileprivate lazy var socket : QJSocket = QJSocket(addr: "192.168.125.116", port: 7878)
+    fileprivate var heartBeatTimer : Timer?
     
     // MARK: 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //1.设置UI界面
         setupUI()
-        
-        //键盘通知
+        //2.键盘通知
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame( _ :)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        //3.连接服务器
+        if socket.connectServer() {
+            print("连接服务器")
+            //开始发送消息
+            socket.startReadMsg()
+            socket.sendHeartBeat()
+            //进入房间
+            socket.sendJoinRoom()
+            socket.delegate = self
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +50,14 @@ class RoomViewController: UIViewController ,Emitterable{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        socket.sendLeaveRoom()
+    }
+    deinit {
+        heartBeatTimer?.invalidate()
+        heartBeatTimer = nil
     }
     
 }
@@ -57,13 +80,18 @@ extension RoomViewController {
     }
     
     fileprivate func setupBottomView(){
-        //设置chatToolsView
+        //1.设置Chat内容的View
+        chatContentView.frame = CGRect(x: 0, y: view.bounds.height - kChatContentViewHeight - 44, width: view.bounds.width, height: kChatContentViewHeight)
+        chatContentView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        view.addSubview(chatContentView)
+        
+        //2.设置chatToolsView
         chatToolsView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
         chatToolsView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         chatToolsView.delegate = self
         view.addSubview(chatToolsView)
         
-        //设置礼物列表
+        //3.设置礼物列表
         giftListView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftlistViewHeight)
         giftListView.delegate = self
         giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
@@ -101,6 +129,17 @@ extension RoomViewController {
     
 }
 
+// MARK: 给服务器发送即时消息
+extension RoomViewController{
+    fileprivate func addHeaderBeatTimer(){
+        heartBeatTimer = Timer(fireAt: Date(), interval: 9, target: self, selector: #selector(sendHeaderBeatMsg), userInfo: nil, repeats: true)
+        RunLoop.main.add(heartBeatTimer!, forMode: .commonModes)
+    }
+    @objc fileprivate func sendHeaderBeatMsg(){
+        socket.sendHeartBeat()
+    }
+}
+
 // MARK: 键盘监听
 extension RoomViewController{
     //
@@ -119,6 +158,30 @@ extension RoomViewController{
         chatToolsView.inputTextField.resignFirstResponder()
     }
 
+}
+
+// MARK: QJSocketDelegate
+//接受聊天服务器返回的消息
+extension RoomViewController : QJSocketDelegate{
+    //进入房间
+    func socket(_ socket: QJSocket, joinRoom user: UserInfo) {
+        
+    }
+    
+    //离开房间
+    func socket(_ socket: QJSocket, leaveRoom user: UserInfo) {
+        
+    }
+    
+    //普通消息
+    func socket(_ socket: QJSocket, chatMsg: ChatMessage) {
+        print()
+    }
+    
+    //礼物消息
+    func socket(_ socket: QJSocket, giftMsg: GiftMessage) {
+        
+    }
 }
 
 //MARK: ChatToolsViewDelegate, GiftListViewDelegate

@@ -35,15 +35,25 @@
 		6A5C10771E9E99540090446B /* GYJTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C10761E9E99540090446B /* GYJTVUITests.swift */; };
 		6A5C10961E9E99880090446B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C108D1E9E99880090446B /* MainViewController.swift */; };
 		6A5C10971E9E99880090446B /* XMGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C108E1E9E99880090446B /* XMGNavigationController.swift */; };
+		6A7CCD6D1EE44AFA0089447E /* TQJCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD671EE44AFA0089447E /* TQJCollectionView.swift */; };
+		6A7CCD6E1EE44AFA0089447E /* TQJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD681EE44AFA0089447E /* TQJContentView.swift */; };
+		6A7CCD6F1EE44AFA0089447E /* TQJPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD691EE44AFA0089447E /* TQJPageCollectionLayout.swift */; };
+		6A7CCD701EE44AFA0089447E /* TQJPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD6A1EE44AFA0089447E /* TQJPageView.swift */; };
+		6A7CCD711EE44AFA0089447E /* TQJTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD6B1EE44AFA0089447E /* TQJTitleStyle.swift */; };
+		6A7CCD721EE44AFA0089447E /* TQJTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD6C1EE44AFA0089447E /* TQJTitleView.swift */; };
+		6A7CCD7B1EE44B540089447E /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD741EE44B540089447E /* Immessage.proto.swift */; };
+		6A7CCD7C1EE44B540089447E /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD761EE44B540089447E /* ysocket.swift */; };
+		6A7CCD7D1EE44B540089447E /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD771EE44B540089447E /* ytcpsocket.c */; };
+		6A7CCD7E1EE44B540089447E /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD781EE44B540089447E /* ytcpsocket.swift */; };
+		6A7CCD7F1EE44B540089447E /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD791EE44B540089447E /* yudpsocket.c */; };
+		6A7CCD801EE44B540089447E /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD7A1EE44B540089447E /* yudpsocket.swift */; };
+		6A7CCD841EE44BE60089447E /* QJSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD831EE44BE60089447E /* QJSocket.swift */; };
+		6A7CCD861EE468C10089447E /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD851EE468C10089447E /* ChatContentView.swift */; };
+		6A7CCD881EE468CA0089447E /* ChatContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7CCD871EE468CA0089447E /* ChatContentView.xib */; };
+		6A7CCD8A1EE4696A0089447E /* ChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD891EE4696A0089447E /* ChatContentCell.swift */; };
 		6A7E9F731EC4AEEE00FB7925 /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E9F721EC4AEEE00FB7925 /* Emitterable.swift */; };
 		6A7E9F751EC4BC0A00FB7925 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E9F741EC4BC0A00FB7925 /* RoomViewController.swift */; };
-		6AB9E94F1EC9DB5E0034F63B /* TQJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E94E1EC9DB5E0034F63B /* TQJContentView.swift */; };
-		6AB9E9551EC9DB940034F63B /* TQJTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9541EC9DB940034F63B /* TQJTitleStyle.swift */; };
-		6AB9E9571EC9DC6D0034F63B /* TQJTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9561EC9DC6D0034F63B /* TQJTitleView.swift */; };
-		6AB9E9591EC9DCCF0034F63B /* TQJPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9581EC9DCCF0034F63B /* TQJPageView.swift */; };
-		6AB9E95D1EC9FADC0034F63B /* TQJCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */; };
 		6AB9E95F1EC9FB110034F63B /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E95E1EC9FB110034F63B /* NibLoadable.swift */; };
-		6AB9E9611ECB453B0034F63B /* TQJPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */; };
 		6AB9E96C1ED46F470034F63B /* ChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E96B1ED46F470034F63B /* ChatToolsView.swift */; };
 		6AB9E96E1ED46F4E0034F63B /* ChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9E96D1ED46F4E0034F63B /* ChatToolsView.xib */; };
 		6AB9E9701ED5DC800034F63B /* EmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E96F1ED5DC800034F63B /* EmotionView.swift */; };
@@ -118,15 +128,25 @@
 		6A5C10781E9E99540090446B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5C108D1E9E99880090446B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6A5C108E1E9E99880090446B /* XMGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMGNavigationController.swift; sourceTree = "<group>"; };
+		6A7CCD671EE44AFA0089447E /* TQJCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJCollectionView.swift; sourceTree = "<group>"; };
+		6A7CCD681EE44AFA0089447E /* TQJContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJContentView.swift; sourceTree = "<group>"; };
+		6A7CCD691EE44AFA0089447E /* TQJPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageCollectionLayout.swift; sourceTree = "<group>"; };
+		6A7CCD6A1EE44AFA0089447E /* TQJPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageView.swift; sourceTree = "<group>"; };
+		6A7CCD6B1EE44AFA0089447E /* TQJTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJTitleStyle.swift; sourceTree = "<group>"; };
+		6A7CCD6C1EE44AFA0089447E /* TQJTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJTitleView.swift; sourceTree = "<group>"; };
+		6A7CCD741EE44B540089447E /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		6A7CCD761EE44B540089447E /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		6A7CCD771EE44B540089447E /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		6A7CCD781EE44B540089447E /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		6A7CCD791EE44B540089447E /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		6A7CCD7A1EE44B540089447E /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		6A7CCD831EE44BE60089447E /* QJSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QJSocket.swift; sourceTree = "<group>"; };
+		6A7CCD851EE468C10089447E /* ChatContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
+		6A7CCD871EE468CA0089447E /* ChatContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentView.xib; sourceTree = "<group>"; };
+		6A7CCD891EE4696A0089447E /* ChatContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentCell.swift; sourceTree = "<group>"; };
 		6A7E9F721EC4AEEE00FB7925 /* Emitterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emitterable.swift; path = Protocol/Emitterable.swift; sourceTree = "<group>"; };
 		6A7E9F741EC4BC0A00FB7925 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
-		6AB9E94E1EC9DB5E0034F63B /* TQJContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJContentView.swift; sourceTree = "<group>"; };
-		6AB9E9541EC9DB940034F63B /* TQJTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJTitleStyle.swift; sourceTree = "<group>"; };
-		6AB9E9561EC9DC6D0034F63B /* TQJTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJTitleView.swift; sourceTree = "<group>"; };
-		6AB9E9581EC9DCCF0034F63B /* TQJPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageView.swift; sourceTree = "<group>"; };
-		6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJCollectionView.swift; sourceTree = "<group>"; };
 		6AB9E95E1EC9FB110034F63B /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = Protocol/NibLoadable.swift; sourceTree = "<group>"; };
-		6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageCollectionLayout.swift; sourceTree = "<group>"; };
 		6AB9E96B1ED46F470034F63B /* ChatToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToolsView.swift; sourceTree = "<group>"; };
 		6AB9E96D1ED46F4E0034F63B /* ChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolsView.xib; sourceTree = "<group>"; };
 		6AB9E96F1ED5DC800034F63B /* EmotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionView.swift; sourceTree = "<group>"; };
@@ -247,20 +267,6 @@
 				6A3760341EC27D7100E4A7E6 /* Const.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		6A3760351EC27D7100E4A7E6 /* TQJPageView */ = {
-			isa = PBXGroup;
-			children = (
-				6AB9E94E1EC9DB5E0034F63B /* TQJContentView.swift */,
-				6AB9E9581EC9DCCF0034F63B /* TQJPageView.swift */,
-				6AB9E9561EC9DC6D0034F63B /* TQJTitleView.swift */,
-				6AB9E9541EC9DB940034F63B /* TQJTitleStyle.swift */,
-				6AB9E95C1EC9FADC0034F63B /* TQJCollectionView.swift */,
-				6AB9E9601ECB453B0034F63B /* TQJPageCollectionLayout.swift */,
-			);
-			name = TQJPageView;
-			path = HYPageView;
 			sourceTree = "<group>";
 		};
 		6A3760411EC27E0300E4A7E6 /* Controller */ = {
@@ -438,9 +444,10 @@
 		6A5C108B1E9E99880090446B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6A7CCD731EE44B540089447E /* TQJSocket */,
+				6A7CCD661EE44AFA0089447E /* TQJPageView */,
 				6A7E9F711EC4ABD400FB7925 /* Protocol */,
 				6A3760331EC27D7100E4A7E6 /* Common */,
-				6A3760351EC27D7100E4A7E6 /* TQJPageView */,
 				6AED95261E9FBF6E00520537 /* Extension */,
 				6A5C108C1E9E99880090446B /* Controller */,
 			);
@@ -470,6 +477,41 @@
 				6A3760571EC27E2B00E4A7E6 /* Controller */,
 			);
 			path = Rank;
+			sourceTree = "<group>";
+		};
+		6A7CCD661EE44AFA0089447E /* TQJPageView */ = {
+			isa = PBXGroup;
+			children = (
+				6A7CCD671EE44AFA0089447E /* TQJCollectionView.swift */,
+				6A7CCD681EE44AFA0089447E /* TQJContentView.swift */,
+				6A7CCD691EE44AFA0089447E /* TQJPageCollectionLayout.swift */,
+				6A7CCD6A1EE44AFA0089447E /* TQJPageView.swift */,
+				6A7CCD6B1EE44AFA0089447E /* TQJTitleStyle.swift */,
+				6A7CCD6C1EE44AFA0089447E /* TQJTitleView.swift */,
+			);
+			path = TQJPageView;
+			sourceTree = "<group>";
+		};
+		6A7CCD731EE44B540089447E /* TQJSocket */ = {
+			isa = PBXGroup;
+			children = (
+				6A7CCD741EE44B540089447E /* Immessage.proto.swift */,
+				6A7CCD831EE44BE60089447E /* QJSocket.swift */,
+				6A7CCD751EE44B540089447E /* ysocket */,
+			);
+			path = TQJSocket;
+			sourceTree = "<group>";
+		};
+		6A7CCD751EE44B540089447E /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				6A7CCD761EE44B540089447E /* ysocket.swift */,
+				6A7CCD771EE44B540089447E /* ytcpsocket.c */,
+				6A7CCD781EE44B540089447E /* ytcpsocket.swift */,
+				6A7CCD791EE44B540089447E /* yudpsocket.c */,
+				6A7CCD7A1EE44B540089447E /* yudpsocket.swift */,
+			);
+			path = ysocket;
 			sourceTree = "<group>";
 		};
 		6A7E9F711EC4ABD400FB7925 /* Protocol */ = {
@@ -517,6 +559,9 @@
 		6AB9E9651ED46F250034F63B /* ChatContentVIew */ = {
 			isa = PBXGroup;
 			children = (
+				6A7CCD851EE468C10089447E /* ChatContentView.swift */,
+				6A7CCD871EE468CA0089447E /* ChatContentView.xib */,
+				6A7CCD891EE4696A0089447E /* ChatContentCell.swift */,
 			);
 			path = ChatContentVIew;
 			sourceTree = "<group>";
@@ -694,6 +739,7 @@
 			files = (
 				6AB9E96E1ED46F4E0034F63B /* ChatToolsView.xib in Resources */,
 				6AB9E9741ED708D90034F63B /* QHSohuGifSort.plist in Resources */,
+				6A7CCD881EE468CA0089447E /* ChatContentView.xib in Resources */,
 				6A3760551EC27E1300E4A7E6 /* Home.storyboard in Resources */,
 				6A37602D1EC27CEC00E4A7E6 /* RoomViewController.xib in Resources */,
 				6A37606A1EC27E8300E4A7E6 /* Profile.storyboard in Resources */,
@@ -780,8 +826,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A7CCD7C1EE44B540089447E /* ysocket.swift in Sources */,
+				6A7CCD6F1EE44AFA0089447E /* TQJPageCollectionLayout.swift in Sources */,
 				6A3760511EC27E0300E4A7E6 /* HomeViewModel.swift in Sources */,
-				6AB9E9591EC9DCCF0034F63B /* TQJPageView.swift in Sources */,
 				6A3760311EC27D3D00E4A7E6 /* KingfisherExtension.swift in Sources */,
 				6A3760321EC27D3D00E4A7E6 /* NetworkTools.swift in Sources */,
 				6A5C10971E9E99880090446B /* XMGNavigationController.swift in Sources */,
@@ -789,34 +836,42 @@
 				6AB9E9701ED5DC800034F63B /* EmotionView.swift in Sources */,
 				6AB9E96C1ED46F470034F63B /* ChatToolsView.swift in Sources */,
 				6A3760561EC27E1300E4A7E6 /* HomeViewController.swift in Sources */,
+				6A7CCD6D1EE44AFA0089447E /* TQJCollectionView.swift in Sources */,
 				6A3760251EC27CC400E4A7E6 /* BaseModel.swift in Sources */,
 				6A5C10961E9E99880090446B /* MainViewController.swift in Sources */,
-				6AB9E9551EC9DB940034F63B /* TQJTitleStyle.swift in Sources */,
+				6A7CCD861EE468C10089447E /* ChatContentView.swift in Sources */,
 				6A3760521EC27E0300E4A7E6 /* WaterfallLayout.swift in Sources */,
+				6A7CCD7D1EE44B540089447E /* ytcpsocket.c in Sources */,
 				6AB9E97B1ED709D40034F63B /* GiftModel.swift in Sources */,
 				6A37604E1EC27E0300E4A7E6 /* HomeType.swift in Sources */,
+				6A7CCD841EE44BE60089447E /* QJSocket.swift in Sources */,
+				6A7CCD7B1EE44B540089447E /* Immessage.proto.swift in Sources */,
 				6AB9E97A1ED709D40034F63B /* EmotionPackages.swift in Sources */,
-				6AB9E94F1EC9DB5E0034F63B /* TQJContentView.swift in Sources */,
 				6AB9E97F1ED709ED0034F63B /* EmoticonViewCell.swift in Sources */,
+				6A7CCD7F1EE44B540089447E /* yudpsocket.c in Sources */,
+				6A7CCD801EE44B540089447E /* yudpsocket.swift in Sources */,
+				6A7CCD721EE44AFA0089447E /* TQJTitleView.swift in Sources */,
 				6A37605E1EC27E3F00E4A7E6 /* RankViewController.swift in Sources */,
 				6A37604D1EC27E0300E4A7E6 /* AnchorModel.swift in Sources */,
 				6AB9E9791ED709D40034F63B /* EmotionModel.swift in Sources */,
 				6AED95281E9FBF8300520537 /* UIColor+Extension.swift in Sources */,
+				6A7CCD7E1EE44B540089447E /* ytcpsocket.swift in Sources */,
 				6AB9E98C1ED70A640034F63B /* GiftViewModel.swift in Sources */,
 				6AB9E9851ED709FE0034F63B /* GiftListView.swift in Sources */,
 				6A5C10571E9E99540090446B /* AppDelegate.swift in Sources */,
 				6AB9E97C1ED709D40034F63B /* GiftPackages.swift in Sources */,
 				6A3760401EC27DA200E4A7E6 /* NSDate-Extension.swift in Sources */,
 				6AB9E95F1EC9FB110034F63B /* NibLoadable.swift in Sources */,
-				6AB9E95D1EC9FADC0034F63B /* TQJCollectionView.swift in Sources */,
 				6AB9E98B1ED70A640034F63B /* EmotionViewModel.swift in Sources */,
-				6AB9E9571EC9DC6D0034F63B /* TQJTitleView.swift in Sources */,
+				6A7CCD711EE44AFA0089447E /* TQJTitleStyle.swift in Sources */,
 				6AB9E9871ED709FE0034F63B /* GiftViewCell.swift in Sources */,
 				6A7E9F751EC4BC0A00FB7925 /* RoomViewController.swift in Sources */,
-				6AB9E9611ECB453B0034F63B /* TQJPageCollectionLayout.swift in Sources */,
 				6A7E9F731EC4AEEE00FB7925 /* Emitterable.swift in Sources */,
+				6A7CCD701EE44AFA0089447E /* TQJPageView.swift in Sources */,
+				6A7CCD6E1EE44AFA0089447E /* TQJContentView.swift in Sources */,
 				6A37603A1EC27D7100E4A7E6 /* Const.swift in Sources */,
 				6A37604F1EC27E0300E4A7E6 /* HomeViewCell.swift in Sources */,
+				6A7CCD8A1EE4696A0089447E /* ChatContentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
