@@ -26,9 +26,10 @@ class ChatContentCell: UITableViewCell {
         backgroundColor = UIColor.clear
         selectionStyle = .none
         contentLabel = UILabel()
+        contentLabel.numberOfLines = 0
+        contentLabel.adjustsFontSizeToFitWidth = true
         contentLabel.font = UIFont.systemFont(ofSize: 15)
-        contentLabel.textColor = UIColor.black
-        contentLabel.backgroundColor = UIColor.yellow
+        contentLabel.textColor = UIColor.white
         contentView.addSubview(contentLabel)
         contentView.backgroundColor = UIColor.clear
     }

@@ -82,6 +82,8 @@ extension RoomViewController {
     fileprivate func setupBottomView(){
         //1.设置Chat内容的View
         chatContentView.frame = CGRect(x: 0, y: view.bounds.height - kChatContentViewHeight - 44, width: view.bounds.width, height: kChatContentViewHeight)
+        chatContentView.backgroundColor = UIColor.black
+        chatContentView.alpha = 0.2
         chatContentView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         view.addSubview(chatContentView)
         
@@ -152,6 +154,10 @@ extension RoomViewController{
             UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: 7)!)
             let endY = inputTextY == (kScreenHeight - kChatToolsViewHeight) ? kScreenHeight : inputTextY
             self.chatToolsView.frame.origin.y = endY
+            
+            //改变聊天信息展示框的位置
+            let contentEndY = inputTextY == (kScreenHeight - kChatToolsViewHeight) ? (kScreenHeight - kChatContentViewHeight - 44) : endY - kChatContentViewHeight
+            self.chatContentView.frame.origin.y = contentEndY
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -165,22 +171,22 @@ extension RoomViewController{
 extension RoomViewController : QJSocketDelegate{
     //进入房间
     func socket(_ socket: QJSocket, joinRoom user: UserInfo) {
-        
+        chatContentView.insertMessage(AttributeStrGenerator.generateJoinAndLevelRoom(user.name, true))
     }
     
     //离开房间
     func socket(_ socket: QJSocket, leaveRoom user: UserInfo) {
-        
+        chatContentView.insertMessage(AttributeStrGenerator.generateJoinAndLevelRoom(user.name, false))
     }
     
     //普通消息
     func socket(_ socket: QJSocket, chatMsg: ChatMessage) {
-        print()
+        chatContentView.insertMessage(AttributeStrGenerator.generateTextMessage(chatMsg.user.name, chatMsg.text))
     }
     
     //礼物消息
     func socket(_ socket: QJSocket, giftMsg: GiftMessage) {
-        
+        chatContentView.insertMessage(AttributeStrGenerator.genetateGiftMessage(giftMsg.user.name, giftMsg.giftname, giftMsg.giftUrl))
     }
 }
 

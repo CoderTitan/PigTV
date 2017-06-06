@@ -41,11 +41,11 @@ class ChatContentView: UIView, NibLoadable {
 // MARK: UITableViewDelegate, UITableViewDataSource
 extension ChatContentView : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return messageArr.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kChatContentCell, for: indexPath) as! ChatContentCell
-        cell.contentLabel.text = "测试\(indexPath.row)"
+        cell.contentLabel.attributedText = messageArr[indexPath.row]
         return cell
     }
 }
