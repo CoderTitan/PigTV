@@ -20,7 +20,7 @@ class RoomViewController: UIViewController ,Emitterable{
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
-    fileprivate lazy var socket : QJSocket = QJSocket(addr: "192.168.125.116", port: 7878)
+    fileprivate lazy var socket : QJSocket = QJSocket(addr: "192.168.125.117", port: 7878)
     fileprivate var heartBeatTimer : Timer?
     
     // MARK: 系统回调函数
@@ -193,9 +193,9 @@ extension RoomViewController : QJSocketDelegate{
 //MARK: ChatToolsViewDelegate, GiftListViewDelegate
 extension RoomViewController : ChatToolsViewDelegate, GiftListViewDelegate{
     func chatTiilsView(chatToolsView: ChatToolsView, message: String) {
-        print(message)
+        socket.sendTextMsg(message: message)
     }
     func giftListView(giftListView: GiftListView, giftModel: GiftModel) {
-        print(giftModel.subject)
+        socket.sendGiftMsg(giftName: giftModel.subject, giftURL: giftModel.img2, giftCount: 2)
     }
 }
