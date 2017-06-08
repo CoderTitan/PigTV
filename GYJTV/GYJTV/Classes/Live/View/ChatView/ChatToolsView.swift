@@ -33,9 +33,12 @@ class ChatToolsView: UIView , NibLoadable{
         guard let message = inputTextField.text else {
             return
         }
+        if message == "" {
+            sender.isEnabled = false
+            return
+        }
         ///清空内容
         inputTextField.text = ""
-        sender.isEnabled = false
         //发送消息
         delegate?.chatTiilsView(chatToolsView: self, message: message)
     }

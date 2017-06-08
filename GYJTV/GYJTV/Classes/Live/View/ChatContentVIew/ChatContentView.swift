@@ -18,13 +18,14 @@ class ChatContentView: UIView, NibLoadable {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        backgroundColor = UIColor.clear
         tableView.register(ChatContentCell.self, forCellReuseIdentifier: kChatContentCell)
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.clear
         tableView.delegate = self
         tableView.dataSource = self
         //高度的自动布局
-        tableView.estimatedRowHeight = 44
+        tableView.estimatedRowHeight = 30
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
@@ -34,7 +35,9 @@ class ChatContentView: UIView, NibLoadable {
         tableView.reloadData()
         //tableView移动到最后一条消息的位置
         let indexPath = IndexPath(row: messageArr.count - 1, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        UIView.animate(withDuration: 0.25) {
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        }
     }
 }
 

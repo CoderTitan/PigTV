@@ -36,7 +36,7 @@ class ChatContentCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentLabel.frame = CGRect(x: 20, y: 5, width: contentView.frame.width - 20 * 2, height: contentView.frame.height - 5 * 2)
+        contentLabel.frame = CGRect(x: 20, y: 0, width: contentView.frame.width, height: contentView.frame.height)
 
     }
     override func awakeFromNib() {

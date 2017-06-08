@@ -9,9 +9,9 @@
 import UIKit
 
 class GiftModel: BaseModel {
-    var img2 : String = "" // 图片
+    var img2 : String = "" // 图片url
     var coin : Int = 0 // 价格
-    var subject : String = "" { // 标题
+    var subject : String = "" { // 礼物名称
         didSet{
             if subject.contains("(有声)") {
                 subject = subject.replacingOccurrences(of: "(有声)", with: "")

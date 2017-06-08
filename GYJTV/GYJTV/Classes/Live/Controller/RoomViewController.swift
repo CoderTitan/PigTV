@@ -9,9 +9,11 @@
 import UIKit
 
 private let kChatToolsViewHeight : CGFloat = 44
-private let kGiftlistViewHeight : CGFloat = kScreenHeight * 0.43
-private let kChatContentViewHeight : CGFloat = 200
-
+private let kGiftlistViewHeight : CGFloat = 320
+private let kChatContentViewHeight : CGFloat = 150
+private let kGiftAnimatViewHeight : CGFloat = 90
+private let kSocialShareViewH : CGFloat = 200
+private let kMoreInfoViewH : CGFloat = 70
 
 class RoomViewController: UIViewController ,Emitterable{
     
@@ -20,7 +22,10 @@ class RoomViewController: UIViewController ,Emitterable{
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
+    fileprivate lazy var socialShareView : SocialShareView = SocialShareView.loadFromNib()
+    fileprivate lazy var moreView : MoreInfoView = MoreInfoView.loadFromNib()
     fileprivate lazy var socket : QJSocket = QJSocket(addr: "192.168.125.117", port: 7878)
+    fileprivate lazy var giftAnimaView : GiftContentView = GiftContentView(frame: CGRect(x: 0, y: kScreenHeight - kGiftlistViewHeight - kChatContentViewHeight - kGiftAnimatViewHeight - 10, width: kScreenWidth * 0.5, height: kGiftAnimatViewHeight))
     fileprivate var heartBeatTimer : Timer?
     
     // MARK: 系统回调函数
@@ -33,7 +38,7 @@ class RoomViewController: UIViewController ,Emitterable{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame( _ :)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         //3.连接服务器
         if socket.connectServer() {
-            print("连接服务器")
+            print("成功连接服务器")
             //开始发送消息
             socket.startReadMsg()
             socket.sendHeartBeat()
@@ -68,6 +73,7 @@ extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
         setupBottomView()
+        
     }
     
     //毛玻璃效果iOS8以后才可以
@@ -81,9 +87,7 @@ extension RoomViewController {
     
     fileprivate func setupBottomView(){
         //1.设置Chat内容的View
-        chatContentView.frame = CGRect(x: 0, y: view.bounds.height - kChatContentViewHeight - 44, width: view.bounds.width, height: kChatContentViewHeight)
-        chatContentView.backgroundColor = UIColor.black
-        chatContentView.alpha = 0.2
+        chatContentView.frame = CGRect(x: 0, y: view.bounds.height - kChatContentViewHeight - 44, width: view.bounds.width * 3 / 4, height: kChatContentViewHeight)
         chatContentView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         view.addSubview(chatContentView)
         
@@ -98,7 +102,22 @@ extension RoomViewController {
         giftListView.delegate = self
         giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         view.addSubview(giftListView)
+        
+        //4.设置分享列表
+        socialShareView.frame = CGRect(x: 0, y: kScreenHeight, width: kScreenWidth, height: kSocialShareViewH)
+        socialShareView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        view.addSubview(socialShareView)
+        
+        //5.设置礼物动画视图
+        view.addSubview(giftAnimaView)
+        
+        //6.设置更多视图
+        moreView.frame = CGRect(x: 0, y: kScreenHeight, width: kScreenWidth, height: kMoreInfoViewH)
+        moreView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        view.addSubview(moreView)
     }
+    
+    
 }
 
 
@@ -109,18 +128,32 @@ extension RoomViewController {
     }
     
     @IBAction func bottomMenuClick(_ sender: UIButton) {
+        //停止点赞动画
+        stopEmittering()
         switch sender.tag {
         case 0:
             chatToolsView.inputTextField.becomeFirstResponder()
         case 1:
-            print("点击了分享")
-        case 2:
             UIView.animate(withDuration: 0.35, animations: { 
-                self.giftListView.frame.origin.y = kScreenHeight - kGiftlistViewHeight
+                self.socialShareView.frame.origin.y = kScreenHeight - kSocialShareViewH
+                self.chatContentView.frame.origin.y = kScreenHeight - kSocialShareViewH - kChatContentViewHeight
+            })
+            socialShareView.showSocialShareView()
+        case 2:
+            UIView.animate(withDuration: 0.35, animations: {
+                UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: 7)!)
+                let endY = kScreenHeight - kGiftlistViewHeight
+                self.giftListView.frame.origin.y = endY
+                //改变聊天信息展示框的位置
+                let contentEndY = endY - kChatContentViewHeight
+                self.chatContentView.frame.origin.y = contentEndY
             })
         case 3:
-            print("点击了更多")
-        case 4:
+            UIView.animate(withDuration: 0.35, animations: { 
+                self.moreView.frame.origin.y = kScreenHeight - kMoreInfoViewH
+                self.chatContentView.frame.origin.y = kScreenHeight - kMoreInfoViewH - kChatContentViewHeight
+            })
+        case 4://开始点赞动画
             sender.isSelected = !sender.isSelected
             let point = CGPoint(x: sender.center.x, y: view.bounds.height - sender.bounds.height * 0.5)
             startEmittering(point)
@@ -160,8 +193,16 @@ extension RoomViewController{
             self.chatContentView.frame.origin.y = contentEndY
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        chatToolsView.inputTextField.resignFirstResponder()
+        view.endEditing(true)
+        UIView.animate(withDuration: 0.25) { 
+            self.chatToolsView.frame.origin.y = kScreenHeight
+            self.giftListView.frame.origin.y = kScreenHeight
+            self.moreView.frame.origin.y = kScreenHeight
+            self.socialShareView.frame.origin.y = kScreenHeight
+            self.chatContentView.frame.origin.y = kScreenHeight - kChatContentViewHeight - 44
+        }
     }
 
 }
@@ -190,12 +231,19 @@ extension RoomViewController : QJSocketDelegate{
     }
 }
 
-//MARK: ChatToolsViewDelegate, GiftListViewDelegate
-extension RoomViewController : ChatToolsViewDelegate, GiftListViewDelegate{
+//MARK: ChatToolsViewDelegate
+extension RoomViewController : ChatToolsViewDelegate {
     func chatTiilsView(chatToolsView: ChatToolsView, message: String) {
         socket.sendTextMsg(message: message)
     }
+}
+
+//MARK: GiftListViewDelegate
+extension RoomViewController : GiftListViewDelegate {
     func giftListView(giftListView: GiftListView, giftModel: GiftModel) {
-        socket.sendGiftMsg(giftName: giftModel.subject, giftURL: giftModel.img2, giftCount: 2)
+        let gift = GiftAnimationModel(senderName: "name-QJ", senderUrl: "icon4", giftName: giftModel.subject, giftUrl: giftModel.img2)
+        giftAnimaView.showGiftModel(gift)
+        
+        socket.sendGiftMsg(giftName: giftModel.subject, giftURL: giftModel.img2, giftCount: 1)
     }
 }

@@ -73,7 +73,17 @@
 		6AB9E98B1ED70A640034F63B /* EmotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E9891ED70A640034F63B /* EmotionViewModel.swift */; };
 		6AB9E98C1ED70A640034F63B /* GiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9E98A1ED70A640034F63B /* GiftViewModel.swift */; };
 		6AED95281E9FBF8300520537 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED95271E9FBF8300520537 /* UIColor+Extension.swift */; };
+		FE0A90AA1EE932990039491C /* GiftChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A90A51EE932990039491C /* GiftChannelView.swift */; };
+		FE0A90AB1EE932990039491C /* GiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0A90A61EE932990039491C /* GiftChannelView.xib */; };
+		FE0A90AC1EE932990039491C /* GiftContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A90A71EE932990039491C /* GiftContentView.swift */; };
+		FE0A90AD1EE932990039491C /* GiftDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A90A81EE932990039491C /* GiftDigitLabel.swift */; };
+		FE0A90B01EE9330D0039491C /* GiftAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A90AF1EE9330D0039491C /* GiftAnimationModel.swift */; };
 		FE0F01EDAD8030F6DEB34A70 /* Pods_GYJTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */; };
+		FE8BC3A71EE96EC6001D436F /* SocialShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8BC3A61EE96EC6001D436F /* SocialShareView.swift */; };
+		FE8BC3A91EE96ED1001D436F /* SocialShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8BC3A81EE96ED1001D436F /* SocialShareView.xib */; };
+		FE8BC3AB1EE96FC5001D436F /* TopImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8BC3AA1EE96FC5001D436F /* TopImageButton.swift */; };
+		FE8BC3AE1EE978D8001D436F /* MoreInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8BC3AD1EE978D8001D436F /* MoreInfoView.xib */; };
+		FE8BC3B21EE97B00001D436F /* MoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8BC3B11EE97B00001D436F /* MoreInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +179,16 @@
 		6AED95271E9FBF8300520537 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GYJTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C746CA53112EF146A438C182 /* Pods-GYJTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYJTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-GYJTV/Pods-GYJTV.release.xcconfig"; sourceTree = "<group>"; };
+		FE0A90A51EE932990039491C /* GiftChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftChannelView.swift; sourceTree = "<group>"; };
+		FE0A90A61EE932990039491C /* GiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftChannelView.xib; sourceTree = "<group>"; };
+		FE0A90A71EE932990039491C /* GiftContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftContentView.swift; sourceTree = "<group>"; };
+		FE0A90A81EE932990039491C /* GiftDigitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDigitLabel.swift; sourceTree = "<group>"; };
+		FE0A90AF1EE9330D0039491C /* GiftAnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftAnimationModel.swift; sourceTree = "<group>"; };
+		FE8BC3A61EE96EC6001D436F /* SocialShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialShareView.swift; sourceTree = "<group>"; };
+		FE8BC3A81EE96ED1001D436F /* SocialShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialShareView.xib; sourceTree = "<group>"; };
+		FE8BC3AA1EE96FC5001D436F /* TopImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopImageButton.swift; sourceTree = "<group>"; };
+		FE8BC3AD1EE978D8001D436F /* MoreInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoView.xib; sourceTree = "<group>"; };
+		FE8BC3B11EE97B00001D436F /* MoreInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,6 +553,7 @@
 				6AB9E9761ED709D40034F63B /* EmotionPackages.swift */,
 				6AB9E9771ED709D40034F63B /* GiftModel.swift */,
 				6AB9E9781ED709D40034F63B /* GiftPackages.swift */,
+				FE0A90AF1EE9330D0039491C /* GiftAnimationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -540,12 +561,12 @@
 		6AB9E9631ED46E290034F63B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE8BC3AC1EE978D1001D436F /* MoreView */,
+				FE8BC3A51EE96EB4001D436F /* SocialShareView */,
+				FE0A90A41EE932990039491C /* GiftAnimation */,
 				6AB9E9651ED46F250034F63B /* ChatContentVIew */,
 				6AB9E9661ED46F250034F63B /* ChatView */,
-				6AB9E9671ED46F250034F63B /* GiftAnimation */,
 				6AB9E9681ED46F250034F63B /* GiftView */,
-				6AB9E9691ED46F250034F63B /* MoreView */,
-				6AB9E96A1ED46F250034F63B /* ShareView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -581,13 +602,6 @@
 			path = ChatView;
 			sourceTree = "<group>";
 		};
-		6AB9E9671ED46F250034F63B /* GiftAnimation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GiftAnimation;
-			sourceTree = "<group>";
-		};
 		6AB9E9681ED46F250034F63B /* GiftView */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,25 +613,12 @@
 			path = GiftView;
 			sourceTree = "<group>";
 		};
-		6AB9E9691ED46F250034F63B /* MoreView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MoreView;
-			sourceTree = "<group>";
-		};
-		6AB9E96A1ED46F250034F63B /* ShareView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ShareView;
-			sourceTree = "<group>";
-		};
 		6AED95261E9FBF6E00520537 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				6A37603F1EC27DA200E4A7E6 /* NSDate-Extension.swift */,
 				6AED95271E9FBF8300520537 /* UIColor+Extension.swift */,
+				FE8BC3AA1EE96FC5001D436F /* TopImageButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -628,6 +629,35 @@
 				C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE0A90A41EE932990039491C /* GiftAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				FE0A90A51EE932990039491C /* GiftChannelView.swift */,
+				FE0A90A61EE932990039491C /* GiftChannelView.xib */,
+				FE0A90A71EE932990039491C /* GiftContentView.swift */,
+				FE0A90A81EE932990039491C /* GiftDigitLabel.swift */,
+			);
+			path = GiftAnimation;
+			sourceTree = "<group>";
+		};
+		FE8BC3A51EE96EB4001D436F /* SocialShareView */ = {
+			isa = PBXGroup;
+			children = (
+				FE8BC3A61EE96EC6001D436F /* SocialShareView.swift */,
+				FE8BC3A81EE96ED1001D436F /* SocialShareView.xib */,
+			);
+			path = SocialShareView;
+			sourceTree = "<group>";
+		};
+		FE8BC3AC1EE978D1001D436F /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				FE8BC3B11EE97B00001D436F /* MoreInfoView.swift */,
+				FE8BC3AD1EE978D8001D436F /* MoreInfoView.xib */,
+			);
+			path = MoreView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -701,6 +731,7 @@
 				TargetAttributes = {
 					6A5C10521E9E99540090446B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 39D8T9VWXG;
 						ProvisioningStyle = Automatic;
 					};
 					6A5C10661E9E99540090446B = {
@@ -743,7 +774,9 @@
 				6AB9E96E1ED46F4E0034F63B /* ChatToolsView.xib in Resources */,
 				6AB9E9741ED708D90034F63B /* QHSohuGifSort.plist in Resources */,
 				6A7CCD881EE468CA0089447E /* ChatContentView.xib in Resources */,
+				FE8BC3AE1EE978D8001D436F /* MoreInfoView.xib in Resources */,
 				6A3760551EC27E1300E4A7E6 /* Home.storyboard in Resources */,
+				FE0A90AB1EE932990039491C /* GiftChannelView.xib in Resources */,
 				6A37602D1EC27CEC00E4A7E6 /* RoomViewController.xib in Resources */,
 				6A37606A1EC27E8300E4A7E6 /* Profile.storyboard in Resources */,
 				6A37605D1EC27E3F00E4A7E6 /* Rank.storyboard in Resources */,
@@ -757,6 +790,7 @@
 				6A5C105E1E9E99540090446B /* Assets.xcassets in Resources */,
 				6A5C105C1E9E99540090446B /* Main.storyboard in Resources */,
 				6A3760641EC27E6600E4A7E6 /* Discover.storyboard in Resources */,
+				FE8BC3A91EE96ED1001D436F /* SocialShareView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,6 +866,7 @@
 				6A7CCD7C1EE44B540089447E /* ysocket.swift in Sources */,
 				6A7CCD6F1EE44AFA0089447E /* TQJPageCollectionLayout.swift in Sources */,
 				6A3760511EC27E0300E4A7E6 /* HomeViewModel.swift in Sources */,
+				FE8BC3AB1EE96FC5001D436F /* TopImageButton.swift in Sources */,
 				6A3760311EC27D3D00E4A7E6 /* KingfisherExtension.swift in Sources */,
 				6A3760321EC27D3D00E4A7E6 /* NetworkTools.swift in Sources */,
 				6A5C10971E9E99880090446B /* XMGNavigationController.swift in Sources */,
@@ -843,12 +878,14 @@
 				6A3760251EC27CC400E4A7E6 /* BaseModel.swift in Sources */,
 				6A5C10961E9E99880090446B /* MainViewController.swift in Sources */,
 				6A7CCD861EE468C10089447E /* ChatContentView.swift in Sources */,
+				FE0A90AC1EE932990039491C /* GiftContentView.swift in Sources */,
 				6A3760521EC27E0300E4A7E6 /* WaterfallLayout.swift in Sources */,
 				6A7CCD7D1EE44B540089447E /* ytcpsocket.c in Sources */,
 				6AB9E97B1ED709D40034F63B /* GiftModel.swift in Sources */,
 				6A37604E1EC27E0300E4A7E6 /* HomeType.swift in Sources */,
 				6A7CCD841EE44BE60089447E /* QJSocket.swift in Sources */,
 				6A7CCD7B1EE44B540089447E /* Immessage.proto.swift in Sources */,
+				FE8BC3A71EE96EC6001D436F /* SocialShareView.swift in Sources */,
 				6AB9E97A1ED709D40034F63B /* EmotionPackages.swift in Sources */,
 				6AB9E97F1ED709ED0034F63B /* EmoticonViewCell.swift in Sources */,
 				6A7CCD7F1EE44B540089447E /* yudpsocket.c in Sources */,
@@ -856,6 +893,8 @@
 				6A7CCD721EE44AFA0089447E /* TQJTitleView.swift in Sources */,
 				6A37605E1EC27E3F00E4A7E6 /* RankViewController.swift in Sources */,
 				6A37604D1EC27E0300E4A7E6 /* AnchorModel.swift in Sources */,
+				FE0A90AD1EE932990039491C /* GiftDigitLabel.swift in Sources */,
+				FE8BC3B21EE97B00001D436F /* MoreInfoView.swift in Sources */,
 				6AB9E9791ED709D40034F63B /* EmotionModel.swift in Sources */,
 				6AED95281E9FBF8300520537 /* UIColor+Extension.swift in Sources */,
 				6A7CCD7E1EE44B540089447E /* ytcpsocket.swift in Sources */,
@@ -868,6 +907,7 @@
 				6AB9E98B1ED70A640034F63B /* EmotionViewModel.swift in Sources */,
 				6A7CCDD11EE70BC40089447E /* AttributeStrGenerator.swift in Sources */,
 				6A7CCD711EE44AFA0089447E /* TQJTitleStyle.swift in Sources */,
+				FE0A90B01EE9330D0039491C /* GiftAnimationModel.swift in Sources */,
 				6AB9E9871ED709FE0034F63B /* GiftViewCell.swift in Sources */,
 				6A7E9F751EC4BC0A00FB7925 /* RoomViewController.swift in Sources */,
 				6A7E9F731EC4AEEE00FB7925 /* Emitterable.swift in Sources */,
@@ -875,6 +915,7 @@
 				6A7CCD6E1EE44AFA0089447E /* TQJContentView.swift in Sources */,
 				6A37603A1EC27D7100E4A7E6 /* Const.swift in Sources */,
 				6A37604F1EC27E0300E4A7E6 /* HomeViewCell.swift in Sources */,
+				FE0A90AA1EE932990039491C /* GiftChannelView.swift in Sources */,
 				6A7CCD8A1EE4696A0089447E /* ChatContentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1029,6 +1070,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 39D8T9VWXG;
 				INFOPLIST_FILE = GYJTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1045,6 +1087,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 39D8T9VWXG;
 				INFOPLIST_FILE = GYJTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

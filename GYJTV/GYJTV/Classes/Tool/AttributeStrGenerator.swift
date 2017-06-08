@@ -66,7 +66,7 @@ extension AttributeStrGenerator{
     //礼物消息
     class func genetateGiftMessage(_ username : String, _ giftname : String, _ gifturl : String) -> NSAttributedString{
         //1.获取赠送礼物的字符串
-        let giftMessage = "\(username) 赠送 \(giftname) "
+        let giftMessage = "\(username) 为主播赠送了 \(giftname) "
         //2.修改用户名称
         let giftAttribute = NSMutableAttributedString(string: giftMessage)
         giftAttribute.addAttributes([NSForegroundColorAttributeName : UIColor.orange], range: NSRange(location: 0, length: username.characters.count))

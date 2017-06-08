@@ -47,7 +47,7 @@ extension GiftListView{
         layout.minimumInteritemSpacing = 5
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
-        pageCollectionView = TQJCollectionView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: giftView.bounds.height), style: style, titles: ["热门", "高级", "豪华", "专属"], isTitleInTop: true, layout: layout)
+        pageCollectionView = TQJCollectionView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: giftView.bounds.height), style: style, titles: ["热门", "高级", "豪华", "专属", "特级"], isTitleInTop: true, layout: layout)
         pageCollectionView.delegate = self
         pageCollectionView.dataSource = self
         pageCollectionView.backgroundColor = UIColor.black
@@ -87,6 +87,7 @@ extension GiftListView : TQJCollectionViewDelegate, TQJCollectionViewDateSource{
 extension GiftListView{
     @IBAction func sendGiftBtnClick() {
         let giftPackage = giftVM.giftListData[(currentIndexPath?.section)!]
+        //选中的礼物
         let gift = giftPackage.list[(currentIndexPath?.item)!]
         delegate?.giftListView(giftListView: self, giftModel: gift)
     }

@@ -23,12 +23,12 @@ extension Emitterable where Self : UIViewController{
         emitter.preservesDepth = true
         //4.创建粒子,设置粒子的相关属性
         var cells = [CAEmitterCell]()
-        for i in 0..<10 {
+        for _ in 0..<5 {
             //4.1创建粒子cell
             let cell = CAEmitterCell()
             //4.2设置粒子速度
-            cell.velocity = 150
-            cell.velocityRange = 100
+            cell.velocity = 100
+            cell.velocityRange = 50
             //4.3设置粒子大小
             cell.scale = 0.7
             cell.scaleRange = 0.3
@@ -42,9 +42,10 @@ extension Emitterable where Self : UIViewController{
             cell.spin = CGFloat(Double.pi / 2)
             cell.spinRange = CGFloat(Double.pi / 4)
             //4.7设置粒子每秒弹出的个数
-            cell.birthRate = 2
+            cell.birthRate = 1
             //4.8设置粒子展示的图片
-            cell.contents = UIImage(named: "good\(i)_30x30")?.cgImage
+            let index = Int(arc4random_uniform(10))
+            cell.contents = UIImage(named: "good\(index)_30x30")?.cgImage
             //4.9添加到数组中
             cells.append(cell)
         }
