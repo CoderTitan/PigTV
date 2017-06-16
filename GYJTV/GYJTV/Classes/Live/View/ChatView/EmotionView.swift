@@ -32,6 +32,7 @@ extension EmotionView{
         // 1.创建PageCollectionView
         let style = TQJTitleStyle()
         style.isShowBottomLine = true
+        
         let layout = TQJPageCollectionLayout()
         layout.cols = 7 // 列
         layout.rows = 3 // 行

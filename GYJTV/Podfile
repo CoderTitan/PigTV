@@ -5,9 +5,14 @@ target 'GYJTV' do
 
 use_frameworks!
 
+# Swift库
 pod 'Alamofire', '~> 4.0.1'
 pod 'Kingfisher', '~> 3.1.1'
 pod 'ProtocolBuffers-Swift'
+
+# OC库
+pod 'MJRefresh'
+pod 'SVProgressHUD'
 
 
 end

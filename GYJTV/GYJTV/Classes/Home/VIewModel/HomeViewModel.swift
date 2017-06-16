@@ -14,8 +14,11 @@ class HomeViewModel {
 
 extension HomeViewModel {
     func loadHomeData(type : HomeType, index : Int,  finishedCallback : @escaping () -> ()) {
-        NetworkTool.requestData(.get, URLString: kHomeDataListUrl, parameters: ["type" : type.type, "index" : index, "size" : 48], finishedCallback: { (result) -> Void in
+        NetworkTool.requestData(.get, URLString: kHomeDataListUrl, parameters: ["type" : type.type, "index" : index, "size" : 24], finishedCallback: { (result) -> Void in
             
+            if index == 0{
+                self.anchorModels.removeAll()
+            }
             guard let resultDict = result as? [String : Any] else { return }
             guard let messageDict = resultDict["message"] as? [String : Any] else { return }
             guard let dataArray = messageDict["anchors"] as? [[String : Any]] else { return }

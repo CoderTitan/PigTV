@@ -22,6 +22,7 @@ class ChatContentView: UIView, NibLoadable {
         tableView.register(ChatContentCell.self, forCellReuseIdentifier: kChatContentCell)
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.clear
+        tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
         tableView.dataSource = self
         //高度的自动布局

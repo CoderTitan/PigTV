@@ -184,6 +184,7 @@
 		FE0A90A71EE932990039491C /* GiftContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftContentView.swift; sourceTree = "<group>"; };
 		FE0A90A81EE932990039491C /* GiftDigitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDigitLabel.swift; sourceTree = "<group>"; };
 		FE0A90AF1EE9330D0039491C /* GiftAnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftAnimationModel.swift; sourceTree = "<group>"; };
+		FE105FBF1EF37E1F00872A71 /* GYJTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYJTV-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE8BC3A61EE96EC6001D436F /* SocialShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialShareView.swift; sourceTree = "<group>"; };
 		FE8BC3A81EE96ED1001D436F /* SocialShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialShareView.xib; sourceTree = "<group>"; };
 		FE8BC3AA1EE96FC5001D436F /* TopImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopImageButton.swift; sourceTree = "<group>"; };
@@ -404,6 +405,7 @@
 				6A37601B1EC27B9600E4A7E6 /* Resource */,
 				6A5C10841E9E99880090446B /* Classes */,
 				6A5C10561E9E99540090446B /* AppDelegate.swift */,
+				FE105FBF1EF37E1F00872A71 /* GYJTV-Bridging-Header.h */,
 				6A5C105A1E9E99540090446B /* Main.storyboard */,
 				6A5C105D1E9E99540090446B /* Assets.xcassets */,
 				6A5C105F1E9E99540090446B /* LaunchScreen.storyboard */,
@@ -823,7 +825,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		65D34952A73665FA5B148507 /* [CP] Embed Pods Frameworks */ = {
@@ -1076,8 +1078,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanjun.www.GYJTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GYJTV/GYJTV-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -1093,8 +1097,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanjun.www.GYJTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GYJTV/GYJTV-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

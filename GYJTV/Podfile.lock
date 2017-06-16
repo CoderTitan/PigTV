@@ -1,18 +1,24 @@
 PODS:
   - Alamofire (4.0.1)
   - Kingfisher (3.1.4)
+  - MJRefresh (3.1.12)
   - ProtocolBuffers-Swift (3.0.6)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
   - Kingfisher (~> 3.1.1)
+  - MJRefresh
   - ProtocolBuffers-Swift
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ProtocolBuffers-Swift: ee072e78456f2332a0b0f759f718b9c59443bbc8
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 357e78c2dce6d29440430f632b7fd1294e29a984
+PODFILE CHECKSUM: 47e124b5e44bd92f3928ff9968818525c9d672e6
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.1

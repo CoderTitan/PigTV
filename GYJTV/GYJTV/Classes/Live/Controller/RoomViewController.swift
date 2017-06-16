@@ -24,7 +24,7 @@ class RoomViewController: UIViewController ,Emitterable{
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
     fileprivate lazy var socialShareView : SocialShareView = SocialShareView.loadFromNib()
     fileprivate lazy var moreView : MoreInfoView = MoreInfoView.loadFromNib()
-    fileprivate lazy var socket : QJSocket = QJSocket(addr: "192.168.125.117", port: 7878)
+    fileprivate lazy var socket : QJSocket = QJSocket(addr: "", port: 7878)
     fileprivate lazy var giftAnimaView : GiftContentView = GiftContentView(frame: CGRect(x: 0, y: kScreenHeight - kGiftlistViewHeight - kChatContentViewHeight - kGiftAnimatViewHeight - 10, width: kScreenWidth * 0.5, height: kGiftAnimatViewHeight))
     fileprivate var heartBeatTimer : Timer?
     

@@ -30,7 +30,7 @@ class AnchorViewController: UIViewController {
         collection.delegate = self
         collection.dataSource = self
         collection.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-//        collection.backgroundColor = UIColor.yellow
+        collection.backgroundColor = UIColor.white
         collection.register(UINib.init(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: kHomeCellID)
         return collection
     }()
@@ -41,21 +41,59 @@ class AnchorViewController: UIViewController {
         super.viewDidLoad()
 
         setupViews()
-        loadDataWithIndex(index: 0)
+        //刷新控件
+        collectionViewRefresh()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        loadHeaderDataWithIndex()
     }
 }
 
-// MARK: 设置界面和数据
+// MARK: 设置界面和刷新控件
 extension AnchorViewController{
     fileprivate func setupViews(){
         view.addSubview(collectionView)
     }
     
-    fileprivate func loadDataWithIndex(index : Int) {
-        homeView.loadHomeData(type: homeType, index : index, finishedCallback: {
+    //添加上拉下拉刷新
+    fileprivate func collectionViewRefresh(){
+        //下拉刷新
+        collectionView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadHeaderDataWithIndex))
+        //上拉加载
+        collectionView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadFooterDataWithIndex))
+        //进入页面开始刷新
+        collectionView.mj_header.beginRefreshing()
+
+    }
+    
+    @objc fileprivate func loadHeaderDataWithIndex() {
+        //下拉刷新时,停止上拉加载
+        if collectionView.mj_footer.isRefreshing() {
+            collectionView.mj_footer.endRefreshing()
+        }
+        collectionView.mj_header.beginRefreshing()
+        homeView.loadHomeData(type: homeType, index : 0, finishedCallback: {
             self.collectionView.reloadData()
+            self.collectionView.mj_header.endRefreshing()
         })
     }
+    @objc fileprivate func loadFooterDataWithIndex() {
+        //上拉加载时,停止下拉刷新
+        if collectionView.mj_header.isRefreshing() {
+            collectionView.mj_header.endRefreshing()
+        }
+        collectionView.mj_footer.beginRefreshing()
+        homeView.loadHomeData(type: homeType, index : homeView.anchorModels.count, finishedCallback: {
+            if self.homeView.anchorModels.count <= 0{
+                
+            }
+            self.collectionView.reloadData()
+            self.collectionView.mj_footer.endRefreshing()
+        })
+    }
+
 }
 
 // MARK: WaterfallLayoutDataSource
@@ -72,9 +110,6 @@ extension AnchorViewController : UICollectionViewDelegate,UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let homeCell = collectionView.dequeueReusableCell(withReuseIdentifier: kHomeCellID, for: indexPath) as! HomeViewCell
         homeCell.anchorModel = homeView.anchorModels[indexPath.item]
-        if indexPath.item == homeView.anchorModels.count - 1 {
-            loadDataWithIndex(index: homeView.anchorModels.count)
-        }
         return homeCell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
