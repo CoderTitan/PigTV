@@ -44,11 +44,6 @@ class AnchorViewController: UIViewController {
         //刷新控件
         collectionViewRefresh()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        loadHeaderDataWithIndex()
-    }
 }
 
 // MARK: 设置界面和刷新控件

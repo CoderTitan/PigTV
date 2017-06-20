@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i3F-6m-MXo">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i3F-6m-MXo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--发现-->
         <scene sceneID="zOm-xj-3Rr">
             <objects>
-                <viewController id="eMo-Nf-Jiv" sceneMemberID="viewController">
+                <viewController id="eMo-Nf-Jiv" customClass="DiscoverViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="afM-k7-RgO"/>
                         <viewControllerLayoutGuide type="bottom" id="Dcr-PT-1Y1"/>
@@ -16,9 +20,28 @@
                     <view key="view" contentMode="scaleToFill" id="qBC-0W-57a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-DP-aoA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eMo-Nf-Jiv" id="b6X-Ve-dDi"/>
+                                    <outlet property="delegate" destination="eMo-Nf-Jiv" id="M2s-CU-iwb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dcr-PT-1Y1" firstAttribute="top" secondItem="Fhd-DP-aoA" secondAttribute="bottom" id="TlE-tw-os0"/>
+                            <constraint firstItem="Fhd-DP-aoA" firstAttribute="leading" secondItem="qBC-0W-57a" secondAttribute="leading" id="mzk-gb-XFL"/>
+                            <constraint firstItem="Fhd-DP-aoA" firstAttribute="top" secondItem="afM-k7-RgO" secondAttribute="bottom" id="nMJ-sm-rcl"/>
+                            <constraint firstAttribute="trailing" secondItem="Fhd-DP-aoA" secondAttribute="trailing" id="zcb-2h-ReP"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vvZ-JC-K9I"/>
+                    <navigationItem key="navigationItem" title="发现" id="vvZ-JC-K9I"/>
+                    <connections>
+                        <outlet property="tableView" destination="Fhd-DP-aoA" id="UOw-cS-Ahy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWt-ip-idR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,11 +50,10 @@
         <!--发现-->
         <scene sceneID="VFi-m0-axf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i3F-6m-MXo" sceneMemberID="viewController">
+                <navigationController title="发现" automaticallyAdjustsScrollViewInsets="NO" id="i3F-6m-MXo" customClass="QJNavigationViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="发现" image="found-n" selectedImage="found-p" id="swl-S9-4Vx"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RZB-2m-TAA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

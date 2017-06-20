@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DiscoverCollectionCell" customModule="GYJTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="141" height="167"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="141" height="167"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dca-7f-93w">
+                        <rect key="frame" x="0.0" y="0.0" width="141" height="117.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="ojf-zE-zYz">
+                        <rect key="frame" x="113" y="5" width="23" height="13"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8990人观看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-fs-z6y">
+                        <rect key="frame" x="5" y="140" width="131" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Hn9-aQ-Yez"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好大熊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUZ-t3-9Xm">
+                        <rect key="frame" x="5" y="122.5" width="131" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="gdZ-so-at0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="cUZ-t3-9Xm" firstAttribute="trailing" secondItem="WMs-fs-z6y" secondAttribute="trailing" id="1No-uO-rym"/>
+                <constraint firstItem="dca-7f-93w" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6ZS-de-sQN"/>
+                <constraint firstItem="ojf-zE-zYz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="7EE-Rx-GdB"/>
+                <constraint firstAttribute="trailing" secondItem="dca-7f-93w" secondAttribute="trailing" id="BkV-gg-1FP"/>
+                <constraint firstAttribute="trailing" secondItem="ojf-zE-zYz" secondAttribute="trailing" constant="5" id="aim-Fs-EzX"/>
+                <constraint firstItem="WMs-fs-z6y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="h1m-ep-ObD"/>
+                <constraint firstItem="WMs-fs-z6y" firstAttribute="top" secondItem="cUZ-t3-9Xm" secondAttribute="bottom" constant="3" id="iMQ-8t-Xxw"/>
+                <constraint firstAttribute="trailing" secondItem="WMs-fs-z6y" secondAttribute="trailing" constant="5" id="nhD-n5-BmO"/>
+                <constraint firstAttribute="bottom" secondItem="WMs-fs-z6y" secondAttribute="bottom" constant="12" id="oKo-I8-SIn"/>
+                <constraint firstItem="dca-7f-93w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rwG-EQ-9dF"/>
+                <constraint firstItem="cUZ-t3-9Xm" firstAttribute="leading" secondItem="WMs-fs-z6y" secondAttribute="leading" id="syB-73-ePl"/>
+                <constraint firstItem="cUZ-t3-9Xm" firstAttribute="top" secondItem="dca-7f-93w" secondAttribute="bottom" constant="5" id="zv4-xF-LM3"/>
+            </constraints>
+            <size key="customSize" width="141" height="167"/>
+            <connections>
+                <outlet property="iconImage" destination="dca-7f-93w" id="59O-wJ-QfQ"/>
+                <outlet property="isLiveImage" destination="ojf-zE-zYz" id="yVa-oC-3oc"/>
+                <outlet property="nameLabel" destination="cUZ-t3-9Xm" id="sDy-NO-Rx8"/>
+                <outlet property="numberLable" destination="WMs-fs-z6y" id="gtG-VU-qwZ"/>
+            </connections>
+            <point key="canvasLocation" x="38.5" y="-59.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_icon_live" width="23" height="13"/>
+    </resources>
+</document>

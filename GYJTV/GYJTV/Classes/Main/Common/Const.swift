@@ -23,10 +23,14 @@ let kTabBarH : CGFloat = 49
 // MARK: 接口数据
 /**首页列表数据*/
 let kHomeDataListUrl : String = "http://qf.56.com/home/v4/moreAnchor.ios"
+
 /**直播间礼物列表*/
 let kRoomGiftListUrl : String = "http://qf.56.com/pay/v4/giftList.ios"
 
-
+/**发现--轮播图*/
+let kDiscoverScrollUrl : String = "http://qf.56.com/home/v4/getBanners.ios"
+/**发现--内容和列表**/
+let kDiscoverContentList : String = "http://qf.56.com/home/v4/guess.ios"
 
 
 

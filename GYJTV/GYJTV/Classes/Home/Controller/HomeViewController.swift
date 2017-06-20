@@ -1,9 +1,9 @@
 //
 //  HomeViewController.swift
-//  XMGTV
+//  GYJTV
 //
-//  Created by 小码哥 on 2016/12/4.
-//  Copyright © 2016年 coderwhy. All rights reserved.
+//  Created by zcm_iOS on 2017/6/19.
+//  Copyright © 2017年 Quanjun. All rights reserved.
 //
 
 import UIKit

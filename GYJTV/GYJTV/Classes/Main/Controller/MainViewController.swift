@@ -1,9 +1,9 @@
 //
 //  MainViewController.swift
-//  XMGTV
+//  GYJTV
 //
-//  Created by apple on 16/11/8.
-//  Copyright © 2016年 coderwhy. All rights reserved.
+//  Created by zcm_iOS on 2017/6/19.
+//  Copyright © 2017年 Quanjun. All rights reserved.
 //
 
 import UIKit
@@ -17,6 +17,7 @@ class MainViewController: UITabBarController {
         addChildVc("Rank")
         addChildVc("Discover")
         addChildVc("Profile")
+        selectedIndex = 2
     }
     
     fileprivate func addChildVc(_ storyName : String) {

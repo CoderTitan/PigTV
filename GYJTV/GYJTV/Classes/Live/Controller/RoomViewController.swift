@@ -17,8 +17,14 @@ private let kMoreInfoViewH : CGFloat = 70
 
 class RoomViewController: UIViewController ,Emitterable{
     
+    //MARK: 对外属性
+    var anchorM : AnchorModel?
+    
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
+    fileprivate var heartBeatTimer : Timer?
+    
+    //MARK: 懒加载属性
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
@@ -26,7 +32,6 @@ class RoomViewController: UIViewController ,Emitterable{
     fileprivate lazy var moreView : MoreInfoView = MoreInfoView.loadFromNib()
     fileprivate lazy var socket : QJSocket = QJSocket(addr: "", port: 7878)
     fileprivate lazy var giftAnimaView : GiftContentView = GiftContentView(frame: CGRect(x: 0, y: kScreenHeight - kGiftlistViewHeight - kChatContentViewHeight - kGiftAnimatViewHeight - 10, width: kScreenWidth * 0.5, height: kGiftAnimatViewHeight))
-    fileprivate var heartBeatTimer : Timer?
     
     // MARK: 系统回调函数
     override func viewDidLoad() {
@@ -182,7 +187,7 @@ extension RoomViewController{
         let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
         let endFrame = (note.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let inputTextY = endFrame.origin.y - kChatToolsViewHeight
-        
+        print(inputTextY)
         UIView.animate(withDuration: duration) { 
             UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: 7)!)
             let endY = inputTextY == (kScreenHeight - kChatToolsViewHeight) ? kScreenHeight : inputTextY

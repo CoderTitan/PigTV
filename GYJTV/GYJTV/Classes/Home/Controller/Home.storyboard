@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9fs-7d-O1j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9fs-7d-O1j">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="b5j-aa-cV1">
             <objects>
-                <viewController id="VWA-Jz-n8C" customClass="HomeViewController" customModule="XMGTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VWA-Jz-n8C" customClass="HomeViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W9c-fr-dEn"/>
                         <viewControllerLayoutGuide type="bottom" id="ctD-dE-P2n"/>
@@ -31,7 +31,7 @@
         <!--直播-->
         <scene sceneID="fbf-8P-hRw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9fs-7d-O1j" customClass="XMGNavigationController" customModule="XMGTV" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9fs-7d-O1j" customClass="QJNavigationViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="直播" image="live-n" selectedImage="live-p" id="ySS-cy-v7C"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

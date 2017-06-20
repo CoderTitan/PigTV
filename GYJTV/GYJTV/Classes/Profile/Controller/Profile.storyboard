@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="esz-iK-nSF">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mir-GH-FiA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--我的-->
+        <!--Profile View Controller-->
         <scene sceneID="F5D-bR-GLW">
             <objects>
-                <viewController id="esz-iK-nSF" sceneMemberID="viewController">
+                <viewController id="esz-iK-nSF" customClass="ProfileViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pxh-RN-DWA"/>
                         <viewControllerLayoutGuide type="bottom" id="9BH-Lk-iW6"/>
@@ -22,12 +22,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的" image="mine-n" selectedImage="mine-p" id="emg-Zu-dTS"/>
+                    <navigationItem key="navigationItem" id="qmK-yz-JfW"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw1-3e-dxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="246"/>
+            <point key="canvasLocation" x="1068" y="245.12743628185908"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="oTy-s9-SOg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mir-GH-FiA" customClass="QJNavigationViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="mine-n" selectedImage="mine-p" id="emg-Zu-dTS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9AC-rV-T3z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="esz-iK-nSF" kind="relationship" relationship="rootViewController" id="HXo-Rh-CqO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJI-Uf-W2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="245.12743628185908"/>
         </scene>
     </scenes>
     <resources>
