@@ -22,6 +22,13 @@ class RoomViewController: UIViewController ,Emitterable{
     
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var roomNumLabel: UILabel!
+    @IBOutlet weak var onLineLabel: UILabel!
+    @IBOutlet weak var focusNumLabel: UILabel!
+    @IBOutlet weak var attenBtnConstraint: NSLayoutConstraint!
+
     fileprivate var heartBeatTimer : Timer?
     
     //MARK: 懒加载属性
@@ -37,8 +44,9 @@ class RoomViewController: UIViewController ,Emitterable{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //1.设置UI界面
+        //0.设置UI界面
         setupUI()
+        
         //2.键盘通知
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame( _ :)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         //3.连接服务器
@@ -77,8 +85,30 @@ class RoomViewController: UIViewController ,Emitterable{
 extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
+        setDataToViews()
         setupBottomView()
+    }
+    
+    //配置页面信息
+    fileprivate func setDataToViews(){
+        guard let roomModel = anchorM else {
+            return
+        }
         
+        iconImage.layer.masksToBounds = true
+        iconImage.layer.cornerRadius = iconImage.bounds.height * 0.5
+        
+        //设置页面数据
+        let imageUrl = roomModel.pic74 == "" ? roomModel.pic51 : roomModel.pic74
+        bgImageView.setImage(imageUrl, "home_pic_default")
+        iconImage.setImage(roomModel.pic51, "home_pic_default")
+        nickNameLabel.text = roomModel.name
+        roomNumLabel.text = "房间号: " + "\(roomModel.roomid)"
+        onLineLabel.text = "\(roomModel.focus)"
+        
+        let nickWidth = (nickNameLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : nickNameLabel.font], context: nil).size.width
+        let roomIDWidth = (roomNumLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : roomNumLabel.font], context: nil).size.width
+        attenBtnConstraint.constant = nickWidth >= roomIDWidth ? nickWidth + 16 : roomIDWidth + 16
     }
     
     //毛玻璃效果iOS8以后才可以
@@ -167,6 +197,10 @@ extension RoomViewController {
         }
     }
     
+    //关注按钮
+    @IBAction func attentionButtonClick(_ sender: UIButton) {
+        
+    }
 }
 
 // MARK: 给服务器发送即时消息

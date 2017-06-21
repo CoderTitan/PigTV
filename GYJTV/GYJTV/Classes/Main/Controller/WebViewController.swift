@@ -30,6 +30,7 @@ class WebViewController: UIViewController {
 //MARK: 界面处理
 extension WebViewController{
     fileprivate func setupWebView(){
+        navigationController?.navigationBar.tintColor = UIColor.white
         view.addSubview(webView)
     }
     

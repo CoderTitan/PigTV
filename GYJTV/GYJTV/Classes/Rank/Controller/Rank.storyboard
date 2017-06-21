@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qkV-l9-pou">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qkV-l9-pou">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--排行-->
         <scene sceneID="awb-SD-WGQ">
             <objects>
-                <viewController id="qkV-l9-pou" customClass="RankViewController" customModule="XMGTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qkV-l9-pou" customClass="RankViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ye6-rD-QKE"/>
                         <viewControllerLayoutGuide type="bottom" id="ibO-3L-gGr"/>
@@ -20,14 +20,28 @@
                     <view key="view" contentMode="scaleToFill" id="Sn8-U0-dHD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sL-WM-AXI">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="i2d-Lf-g6v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0sL-WM-AXI" secondAttribute="trailing" id="3bH-kl-Ky6"/>
+                            <constraint firstItem="0sL-WM-AXI" firstAttribute="leading" secondItem="Sn8-U0-dHD" secondAttribute="leading" id="hpt-37-LZ8"/>
+                            <constraint firstItem="ibO-3L-gGr" firstAttribute="top" secondItem="0sL-WM-AXI" secondAttribute="bottom" constant="-49" id="zS8-7A-ayM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="排行" image="ranking-n" selectedImage="ranking-p" id="fSE-J3-VNr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="208-zl-Zd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="76"/>
+            <point key="canvasLocation" x="112.8" y="75.112443778110944"/>
         </scene>
     </scenes>
     <resources>

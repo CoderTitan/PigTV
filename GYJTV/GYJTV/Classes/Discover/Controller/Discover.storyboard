@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--发现-->
+        <!--Discover View Controller-->
         <scene sceneID="zOm-xj-3Rr">
             <objects>
                 <viewController id="eMo-Nf-Jiv" customClass="DiscoverViewController" customModule="GYJTV" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                             <constraint firstAttribute="trailing" secondItem="Fhd-DP-aoA" secondAttribute="trailing" id="zcb-2h-ReP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="发现" id="vvZ-JC-K9I"/>
+                    <navigationItem key="navigationItem" id="vvZ-JC-K9I"/>
                     <connections>
                         <outlet property="tableView" destination="Fhd-DP-aoA" id="UOw-cS-Ahy"/>
                     </connections>

@@ -22,6 +22,8 @@ class TQJTitleStyle: NSObject {
     var titleMargin : CGFloat = 20
     /// title的高度
     var titleHeight : CGFloat = 44
+    /// 标题栏背景的颜色
+    var titleBackGroundColor : UIColor = UIColor.clear
 
     
     /// 是否显示底部滚动条

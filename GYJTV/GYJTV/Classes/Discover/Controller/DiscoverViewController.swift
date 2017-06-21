@@ -26,12 +26,14 @@ class DiscoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.tintColor = UIColor.white
+        setNavigationTitle()
         setupViews()
+        addRefreshView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         courseView.stopTimer()
     }
     
@@ -43,6 +45,13 @@ class DiscoverViewController: UIViewController {
 
 //MARK: 界面数据
 extension DiscoverViewController{
+    fileprivate func setNavigationTitle(){
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        title.text = "发现"
+        title.textColor = UIColor.white
+        title.textAlignment = .center
+        navigationItem.titleView = title
+    }
     fileprivate func setupViews(){
         automaticallyAdjustsScrollViewInsets = false
         tableView.rowHeight = kTableViewRowHeight
@@ -94,9 +103,6 @@ extension DiscoverViewController{
     @objc fileprivate func tableViewHeaderRefresh(){
         //头部轮播图
         courseView.loadCourseData()
-        //中间内容
-        let cell = tableView.visibleCells.first as? DiscoverTableCell
-        cell?.loadContentData()
         tableView.mj_header.endRefreshing()
     }
 

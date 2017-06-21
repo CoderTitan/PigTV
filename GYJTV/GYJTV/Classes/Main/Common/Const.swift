@@ -32,6 +32,10 @@ let kDiscoverScrollUrl : String = "http://qf.56.com/home/v4/getBanners.ios"
 /**发现--内容和列表**/
 let kDiscoverContentList : String = "http://qf.56.com/home/v4/guess.ios"
 
+/**排行--明星,富豪,人气榜**/
+let kRankDetailListUrl : String = "http://qf.56.com/rank/v1/"
+/**排行--周星榜**/
+let kRankWeeklyListUrl : String = "http://qf.56.com/activity/star/v1/rankAll.ios"
 
 
 

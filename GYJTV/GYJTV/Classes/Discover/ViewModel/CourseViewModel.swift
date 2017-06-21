@@ -14,7 +14,7 @@ class CourseViewModel {
     
     func loadCourseData( _ complection : @escaping() -> ()){
         NetworkTool.requestData(.get, URLString: kDiscoverScrollUrl) { (result : Any) in
-            
+            self.courseArray.removeAll()
             guard let resultDic = result as? [String : Any] else { return }
             
             guard let message = resultDic["message"] as? [String : Any] else { return }

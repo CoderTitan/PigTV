@@ -15,6 +15,7 @@ class DiscoverViewModel: HomeViewModel {
 extension DiscoverViewModel{
     func loadDiscoverContentData( _ complation : @escaping() -> ()){
         NetworkTool.requestData(.get, URLString: kDiscoverContentList, parameters: ["count" : 20]) { (result) in
+            self.anchorModels.removeAll()
             guard let resultDic = result as? [String : Any] else { return }
             guard let message = resultDic["message"] as? [String : Any] else { return }
             guard let anchors = message["anchors"] as? [[String : Any]] else { return }

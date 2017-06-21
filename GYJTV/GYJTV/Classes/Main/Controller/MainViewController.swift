@@ -17,7 +17,7 @@ class MainViewController: UITabBarController {
         addChildVc("Rank")
         addChildVc("Discover")
         addChildVc("Profile")
-        selectedIndex = 2
+        selectedIndex = 0
     }
     
     fileprivate func addChildVc(_ storyName : String) {

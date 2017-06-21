@@ -45,6 +45,7 @@ extension TQJPageView {
         let titleH : CGFloat = 44
         let titleFrame = CGRect(x: 0, y: 0, width: frame.width, height: titleH)
         titleView = TQJTitleView(frame: titleFrame, titles: titles, style : style)
+        titleView.backgroundColor = style.titleBackGroundColor
         titleView.delegate = self
         addSubview(titleView)
         
