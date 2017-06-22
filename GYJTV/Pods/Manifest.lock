@@ -3,6 +3,9 @@ PODS:
   - Kingfisher (3.1.4)
   - MJRefresh (3.1.12)
   - ProtocolBuffers-Swift (3.0.6)
+  - RxCocoa (3.1.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.1.0)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
@@ -10,6 +13,8 @@ DEPENDENCIES:
   - Kingfisher (~> 3.1.1)
   - MJRefresh
   - ProtocolBuffers-Swift
+  - RxCocoa
+  - RxSwift
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -17,8 +22,10 @@ SPEC CHECKSUMS:
   Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ProtocolBuffers-Swift: ee072e78456f2332a0b0f759f718b9c59443bbc8
+  RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
+  RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 47e124b5e44bd92f3928ff9968818525c9d672e6
+PODFILE CHECKSUM: 91e3a36f0ac7aa3f708f58736efef8f71b4b9103
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0.beta.1
