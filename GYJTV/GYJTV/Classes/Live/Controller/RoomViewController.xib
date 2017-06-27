@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomViewController" customModule="GYJTV" customModuleProvider="target">
             <connections>
                 <outlet property="attenBtnConstraint" destination="tsx-IW-6kO" id="T8g-HT-79s"/>
+                <outlet property="attentionBtn" destination="trb-p7-G5f" id="xUq-r3-cQJ"/>
                 <outlet property="bgImageView" destination="mL0-zd-7mL" id="c5c-s0-nKM"/>
                 <outlet property="focusNumLabel" destination="dka-eM-9IM" id="zLo-lm-f6X"/>
                 <outlet property="iconImage" destination="MlB-Py-31k" id="nUQ-am-qbx"/>

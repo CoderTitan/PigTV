@@ -34,6 +34,18 @@
 		6A5C106C1E9E99540090446B /* GYJTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C106B1E9E99540090446B /* GYJTVTests.swift */; };
 		6A5C10771E9E99540090446B /* GYJTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C10761E9E99540090446B /* GYJTVUITests.swift */; };
 		6A5C10961E9E99880090446B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C108D1E9E99880090446B /* MainViewController.swift */; };
+		6A6134A31F029A8000B1820D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6134A21F029A8000B1820D /* libsqlite3.0.tbd */; };
+		6A6134A51F029A8900B1820D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6134A41F029A8900B1820D /* libz.tbd */; };
+		6A6134A71F029B4800B1820D /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134A61F029B4800B1820D /* FocusViewController.swift */; };
+		6A6134A91F029B5C00B1820D /* FocusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134A81F029B5C00B1820D /* FocusViewModel.swift */; };
+		6A6134AD1F029B6F00B1820D /* FocusTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134AA1F029B6F00B1820D /* FocusTableCell.swift */; };
+		6A6134AE1F029B6F00B1820D /* FocusTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6134AB1F029B6F00B1820D /* FocusTableCell.xib */; };
+		6A6134AF1F029B6F00B1820D /* ShadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134AC1F029B6F00B1820D /* ShadeView.swift */; };
+		6A6134B11F029C0D00B1820D /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134B01F029C0D00B1820D /* RoomViewModel.swift */; };
+		6A6134B31F029C6700B1820D /* SqliteTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134B21F029C6700B1820D /* SqliteTools.swift */; };
+		6A6134B51F029C8400B1820D /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134B41F029C8400B1820D /* String-Extension.swift */; };
+		6A6134BA1F029CC600B1820D /* LivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6134B81F029CC600B1820D /* LivingViewController.swift */; };
+		6A6134BB1F029CC600B1820D /* LivingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6134B91F029CC600B1820D /* LivingViewController.xib */; };
 		6A7CCD6D1EE44AFA0089447E /* TQJCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD671EE44AFA0089447E /* TQJCollectionView.swift */; };
 		6A7CCD6E1EE44AFA0089447E /* TQJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD681EE44AFA0089447E /* TQJContentView.swift */; };
 		6A7CCD6F1EE44AFA0089447E /* TQJPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CCD691EE44AFA0089447E /* TQJPageCollectionLayout.swift */; };
@@ -170,6 +182,18 @@
 		6A5C10761E9E99540090446B /* GYJTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYJTVUITests.swift; sourceTree = "<group>"; };
 		6A5C10781E9E99540090446B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5C108D1E9E99880090446B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6A6134A21F029A8000B1820D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6A6134A41F029A8900B1820D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6A6134A61F029B4800B1820D /* FocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
+		6A6134A81F029B5C00B1820D /* FocusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewModel.swift; sourceTree = "<group>"; };
+		6A6134AA1F029B6F00B1820D /* FocusTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusTableCell.swift; sourceTree = "<group>"; };
+		6A6134AB1F029B6F00B1820D /* FocusTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusTableCell.xib; sourceTree = "<group>"; };
+		6A6134AC1F029B6F00B1820D /* ShadeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadeView.swift; sourceTree = "<group>"; };
+		6A6134B01F029C0D00B1820D /* RoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		6A6134B21F029C6700B1820D /* SqliteTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteTools.swift; sourceTree = "<group>"; };
+		6A6134B41F029C8400B1820D /* String-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
+		6A6134B81F029CC600B1820D /* LivingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivingViewController.swift; sourceTree = "<group>"; };
+		6A6134B91F029CC600B1820D /* LivingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LivingViewController.xib; sourceTree = "<group>"; };
 		6A7CCD671EE44AFA0089447E /* TQJCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJCollectionView.swift; sourceTree = "<group>"; };
 		6A7CCD681EE44AFA0089447E /* TQJContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJContentView.swift; sourceTree = "<group>"; };
 		6A7CCD691EE44AFA0089447E /* TQJPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQJPageCollectionLayout.swift; sourceTree = "<group>"; };
@@ -261,6 +285,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6134A51F029A8900B1820D /* libz.tbd in Frameworks */,
+				6A6134A31F029A8000B1820D /* libsqlite3.0.tbd in Frameworks */,
 				FE0F01EDAD8030F6DEB34A70 /* Pods_GYJTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +347,7 @@
 		6A37602E1EC27D3D00E4A7E6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				6A6134B21F029C6700B1820D /* SqliteTools.swift */,
 				6A37602F1EC27D3D00E4A7E6 /* KingfisherExtension.swift */,
 				6A3760301EC27D3D00E4A7E6 /* NetworkTools.swift */,
 				6A7CCDD01EE70BC40089447E /* AttributeStrGenerator.swift */,
@@ -342,6 +369,7 @@
 				6A3760531EC27E1300E4A7E6 /* Home.storyboard */,
 				6A3760541EC27E1300E4A7E6 /* HomeViewController.swift */,
 				6A3760421EC27E0300E4A7E6 /* AnchorViewController.swift */,
+				6A6134A61F029B4800B1820D /* FocusViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -360,6 +388,9 @@
 			children = (
 				6A3760471EC27E0300E4A7E6 /* HomeViewCell.swift */,
 				6A3760481EC27E0300E4A7E6 /* HomeViewCell.xib */,
+				6A6134AA1F029B6F00B1820D /* FocusTableCell.swift */,
+				6A6134AB1F029B6F00B1820D /* FocusTableCell.xib */,
+				6A6134AC1F029B6F00B1820D /* ShadeView.swift */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -369,6 +400,7 @@
 			children = (
 				6A37604A1EC27E0300E4A7E6 /* HomeViewModel.swift */,
 				6A37604B1EC27E0300E4A7E6 /* WaterfallLayout.swift */,
+				6A6134A81F029B5C00B1820D /* FocusViewModel.swift */,
 			);
 			path = VIewModel;
 			sourceTree = "<group>";
@@ -484,6 +516,7 @@
 		6A5C10841E9E99880090446B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6A6134B61F029CC600B1820D /* Living */,
 				6A5C108B1E9E99880090446B /* Main */,
 				6A37602E1EC27D3D00E4A7E6 /* Tool */,
 				6A3EAF4E1EA6E58D0069F6E6 /* Base */,
@@ -562,6 +595,23 @@
 			path = Rank;
 			sourceTree = "<group>";
 		};
+		6A6134B61F029CC600B1820D /* Living */ = {
+			isa = PBXGroup;
+			children = (
+				6A6134B71F029CC600B1820D /* Controller */,
+			);
+			path = Living;
+			sourceTree = "<group>";
+		};
+		6A6134B71F029CC600B1820D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A6134B81F029CC600B1820D /* LivingViewController.swift */,
+				6A6134B91F029CC600B1820D /* LivingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6A7CCD661EE44AFA0089447E /* TQJPageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +686,7 @@
 			children = (
 				6AB9E9891ED70A640034F63B /* EmotionViewModel.swift */,
 				6AB9E98A1ED70A640034F63B /* GiftViewModel.swift */,
+				6A6134B01F029C0D00B1820D /* RoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -679,6 +730,7 @@
 				6A37603F1EC27DA200E4A7E6 /* NSDate-Extension.swift */,
 				6AED95271E9FBF8300520537 /* UIColor+Extension.swift */,
 				FE8BC3AA1EE96FC5001D436F /* TopImageButton.swift */,
+				6A6134B41F029C8400B1820D /* String-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -686,6 +738,8 @@
 		8CEFC255C71270BB557EB9CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A6134A41F029A8900B1820D /* libz.tbd */,
+				6A6134A21F029A8000B1820D /* libsqlite3.0.tbd */,
 				C6FF30D59A8A637781823EB9 /* Pods_GYJTV.framework */,
 			);
 			name = Frameworks;
@@ -918,12 +972,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB9E96E1ED46F4E0034F63B /* ChatToolsView.xib in Resources */,
+				6A6134AE1F029B6F00B1820D /* FocusTableCell.xib in Resources */,
 				6AB9E9741ED708D90034F63B /* QHSohuGifSort.plist in Resources */,
 				6A7CCD881EE468CA0089447E /* ChatContentView.xib in Resources */,
 				FE2A08B31EF7D0D000796072 /* ProfileHeaderView.xib in Resources */,
 				FE8BC3AE1EE978D8001D436F /* MoreInfoView.xib in Resources */,
 				6A3760551EC27E1300E4A7E6 /* Home.storyboard in Resources */,
 				FE2A08AB1EF7B8F300796072 /* ProfileViewCell.xib in Resources */,
+				6A6134BB1F029CC600B1820D /* LivingViewController.xib in Resources */,
 				FE0A90AB1EE932990039491C /* GiftChannelView.xib in Resources */,
 				6A37602D1EC27CEC00E4A7E6 /* RoomViewController.xib in Resources */,
 				6A37606A1EC27E8300E4A7E6 /* Profile.storyboard in Resources */,
@@ -1019,17 +1075,20 @@
 				FE48D2D31EF7FE1F001240FA /* CourseViewModel.swift in Sources */,
 				FE4C62B01EF8D1E200BF60E0 /* DiscoverTableCell.swift in Sources */,
 				FE2A08A31EF7B50500796072 /* BaseProfileViewController.swift in Sources */,
+				6A6134A71F029B4800B1820D /* FocusViewController.swift in Sources */,
 				6A7CCD6F1EE44AFA0089447E /* TQJPageCollectionLayout.swift in Sources */,
 				FE2A08AA1EF7B8F300796072 /* ProfileViewCell.swift in Sources */,
 				6A3760511EC27E0300E4A7E6 /* HomeViewModel.swift in Sources */,
 				FE8BC3AB1EE96FC5001D436F /* TopImageButton.swift in Sources */,
 				6A3760311EC27D3D00E4A7E6 /* KingfisherExtension.swift in Sources */,
 				FE2A08B11EF7D0C800796072 /* ProfileHeaderView.swift in Sources */,
+				6A6134B31F029C6700B1820D /* SqliteTools.swift in Sources */,
 				6A3760321EC27D3D00E4A7E6 /* NetworkTools.swift in Sources */,
 				FE2A08A71EF7B63D00796072 /* SettingItemModel.swift in Sources */,
 				6A37604C1EC27E0300E4A7E6 /* AnchorViewController.swift in Sources */,
 				6AB9E9701ED5DC800034F63B /* EmotionView.swift in Sources */,
 				FE84EF6C1EFA19E900EA5C47 /* WeekAllRankViewController.swift in Sources */,
+				6A6134B51F029C8400B1820D /* String-Extension.swift in Sources */,
 				6AB9E96C1ED46F470034F63B /* ChatToolsView.swift in Sources */,
 				FE48D2D11EF7FD2A001240FA /* CourseModel.swift in Sources */,
 				FE84EF661EF961E800EA5C47 /* WeeklyRankViewController.swift in Sources */,
@@ -1042,11 +1101,14 @@
 				6A5C10961E9E99880090446B /* MainViewController.swift in Sources */,
 				6A7CCD861EE468C10089447E /* ChatContentView.swift in Sources */,
 				FE0A90AC1EE932990039491C /* GiftContentView.swift in Sources */,
+				6A6134A91F029B5C00B1820D /* FocusViewModel.swift in Sources */,
 				6A3760521EC27E0300E4A7E6 /* WaterfallLayout.swift in Sources */,
+				6A6134B11F029C0D00B1820D /* RoomViewModel.swift in Sources */,
 				6A7CCD7D1EE44B540089447E /* ytcpsocket.c in Sources */,
 				6AB9E97B1ED709D40034F63B /* GiftModel.swift in Sources */,
 				FE84EF541EF94AF500EA5C47 /* RankModel.swift in Sources */,
 				FE84EF591EF94C0800EA5C47 /* DetailRankTableCell.swift in Sources */,
+				6A6134AD1F029B6F00B1820D /* FocusTableCell.swift in Sources */,
 				6A37604E1EC27E0300E4A7E6 /* HomeType.swift in Sources */,
 				6A7CCD841EE44BE60089447E /* QJSocket.swift in Sources */,
 				6A7CCD7B1EE44B540089447E /* Immessage.proto.swift in Sources */,
@@ -1068,6 +1130,7 @@
 				6AB9E9791ED709D40034F63B /* EmotionModel.swift in Sources */,
 				6AED95281E9FBF8300520537 /* UIColor+Extension.swift in Sources */,
 				FE84EF521EF94A9A00EA5C47 /* RankType.swift in Sources */,
+				6A6134BA1F029CC600B1820D /* LivingViewController.swift in Sources */,
 				FE48D2D51EF80144001240FA /* CourseHeaderVIew.swift in Sources */,
 				FE84EF681EFA14EF00EA5C47 /* SubRankViewController.swift in Sources */,
 				6A7CCD7E1EE44B540089447E /* ytcpsocket.swift in Sources */,
@@ -1075,6 +1138,7 @@
 				6AB9E98C1ED70A640034F63B /* GiftViewModel.swift in Sources */,
 				6AB9E9851ED709FE0034F63B /* GiftListView.swift in Sources */,
 				6A5C10571E9E99540090446B /* AppDelegate.swift in Sources */,
+				6A6134AF1F029B6F00B1820D /* ShadeView.swift in Sources */,
 				6AB9E97C1ED709D40034F63B /* GiftPackages.swift in Sources */,
 				6A3760401EC27DA200E4A7E6 /* NSDate-Extension.swift in Sources */,
 				6AB9E95F1EC9FB110034F63B /* NibLoadable.swift in Sources */,

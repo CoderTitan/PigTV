@@ -19,6 +19,11 @@ let kTabBarH : CGFloat = 49
 
 
 
+//MARK: 颜色
+let kBackGroundColor : UIColor = UIColor(r: 245, g: 245, b: 245)
+
+
+
 
 // MARK: 接口数据
 /**首页列表数据*/
@@ -26,6 +31,9 @@ let kHomeDataListUrl : String = "http://qf.56.com/home/v4/moreAnchor.ios"
 
 /**直播间礼物列表*/
 let kRoomGiftListUrl : String = "http://qf.56.com/pay/v4/giftList.ios"
+/**直播间视频播放地址请求*/
+let kRoomOnLiveUrl : String = "http://qf.56.com/play/v2/preLoading.ios"
+
 
 /**发现--轮播图*/
 let kDiscoverScrollUrl : String = "http://qf.56.com/home/v4/getBanners.ios"

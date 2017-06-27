@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IJKMediaFramework
 
 private let kChatToolsViewHeight : CGFloat = 44
 private let kGiftlistViewHeight : CGFloat = 320
@@ -19,6 +20,8 @@ class RoomViewController: UIViewController ,Emitterable{
     
     //MARK: 对外属性
     var anchorM : AnchorModel?
+    var isPush : Int = 0
+    
     
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
@@ -28,10 +31,14 @@ class RoomViewController: UIViewController ,Emitterable{
     @IBOutlet weak var onLineLabel: UILabel!
     @IBOutlet weak var focusNumLabel: UILabel!
     @IBOutlet weak var attenBtnConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var attentionBtn: UIButton!
+    
     fileprivate var heartBeatTimer : Timer?
+    fileprivate var ijkPlayer : IJKFFMoviePlayerController?
     
     //MARK: 懒加载属性
+    fileprivate lazy var roomVM : RoomViewModel = RoomViewModel()
+    fileprivate lazy var focusVM : FocusViewModel = FocusViewModel()
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
@@ -47,18 +54,12 @@ class RoomViewController: UIViewController ,Emitterable{
         //0.设置UI界面
         setupUI()
         
+        //1.设置界面数据
+        setupRoomnfo()
         //2.键盘通知
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame( _ :)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-        //3.连接服务器
-        if socket.connectServer() {
-            print("成功连接服务器")
-            //开始发送消息
-            socket.startReadMsg()
-            socket.sendHeartBeat()
-            //进入房间
-            socket.sendJoinRoom()
-            socket.delegate = self
-        }
+        //3.链接服务器
+        connectMessageServer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,16 +69,21 @@ class RoomViewController: UIViewController ,Emitterable{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        //界面消失，一定要记得停止播放
+        ijkPlayer?.stop()
+        ijkPlayer?.shutdown()
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         socket.sendLeaveRoom()
     }
     deinit {
+        NotificationCenter.default.removeObserver(self)//销毁通知
+        //销毁定时器
         heartBeatTimer?.invalidate()
         heartBeatTimer = nil
     }
-    
 }
 
 
@@ -85,30 +91,7 @@ class RoomViewController: UIViewController ,Emitterable{
 extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
-        setDataToViews()
         setupBottomView()
-    }
-    
-    //配置页面信息
-    fileprivate func setDataToViews(){
-        guard let roomModel = anchorM else {
-            return
-        }
-        
-        iconImage.layer.masksToBounds = true
-        iconImage.layer.cornerRadius = iconImage.bounds.height * 0.5
-        
-        //设置页面数据
-        let imageUrl = roomModel.pic74 == "" ? roomModel.pic51 : roomModel.pic74
-        bgImageView.setImage(imageUrl, "home_pic_default")
-        iconImage.setImage(roomModel.pic51, "home_pic_default")
-        nickNameLabel.text = roomModel.name
-        roomNumLabel.text = "房间号: " + "\(roomModel.roomid)"
-        onLineLabel.text = "\(roomModel.focus)"
-        
-        let nickWidth = (nickNameLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : nickNameLabel.font], context: nil).size.width
-        let roomIDWidth = (roomNumLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : roomNumLabel.font], context: nil).size.width
-        attenBtnConstraint.constant = nickWidth >= roomIDWidth ? nickWidth + 16 : roomIDWidth + 16
     }
     
     //毛玻璃效果iOS8以后才可以
@@ -151,8 +134,97 @@ extension RoomViewController {
         moreView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         view.addSubview(moreView)
     }
+}
+
+//MARK: 加载房间信息
+extension RoomViewController{
     
+    fileprivate func setupRoomnfo(){
+        setDataToViews()
+        attentionButtonClick()
+        loadRoomInfo()
+    }
     
+    //加载页面信息
+    fileprivate func setDataToViews(){
+        guard let roomModel = anchorM else {
+            return
+        }
+        
+        iconImage.layer.masksToBounds = true
+        iconImage.layer.cornerRadius = iconImage.bounds.height * 0.5
+        
+        //设置页面数据
+        let imageUrl = roomModel.pic74 == "" ? roomModel.pic51 : roomModel.pic74
+        bgImageView.setImage(imageUrl, "home_pic_default")
+        iconImage.setImage(roomModel.pic51, "home_pic_default")
+        nickNameLabel.text = roomModel.name
+        roomNumLabel.text = "房间号: " + roomModel.roomid
+        onLineLabel.text = "\(roomModel.focus)"
+        
+        let nickWidth = (nickNameLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : nickNameLabel.font], context: nil).size.width
+        let roomIDWidth = (roomNumLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : roomNumLabel.font], context: nil).size.width
+        attenBtnConstraint.constant = nickWidth >= roomIDWidth ? nickWidth + 16 : roomIDWidth + 16
+    }
+    
+    //关注按钮处理
+    fileprivate func attentionButtonClick(){
+        focusVM.loadFocusData {
+            for anchor in self.focusVM.anchorModels{
+                if anchor.roomid == self.anchorM?.roomid {
+                    self.attentionBtn.isSelected = true
+                    self.attentionBtn.setTitle("已关注", for: .normal)
+                }
+            }
+        }
+    }
+    
+    //加载视频信息
+    fileprivate func loadRoomInfo(){
+        if let roomID = anchorM?.roomid, let uid = anchorM?.uid {
+            print(roomID, uid)
+            roomVM.loadLiveUrl(uid: uid, roomID: roomID, { 
+                self.setPlayerVideo()
+            })
+        }
+    }
+    
+    //播放视频
+    fileprivate func setPlayerVideo(){
+        //1.关闭log
+        IJKFFMoviePlayerController.setLogReport(false)
+        //2.初始化播放器
+        let liveUrl = roomVM.liveUrl
+        ijkPlayer = IJKFFMoviePlayerController(contentURLString: liveUrl, with: nil)
+        
+        //3.设置播放尺寸
+        ijkPlayer?.view.frame = anchorM?.push == 1 ? CGRect(x: 0, y: 150, width: kScreenWidth, height: kScreenWidth * 3 / 4) : view.bounds
+        
+        //3.将view添加到播放界面中
+        bgImageView.insertSubview((ijkPlayer?.view)!, at: 1)
+        
+        //4.开始播放
+        DispatchQueue.global().async {
+            self.ijkPlayer?.prepareToPlay()
+            self.ijkPlayer?.play()
+        }
+    }
+}
+
+//MARK: 链接通讯服务器
+extension RoomViewController{
+    fileprivate func connectMessageServer(){
+        //3.连接服务器
+        if socket.connectServer() {
+            print("成功连接服务器")
+            //开始发送消息
+            socket.startReadMsg()
+            socket.sendHeartBeat()
+            //进入房间
+            socket.sendJoinRoom()
+            socket.delegate = self
+        }
+    }
 }
 
 
@@ -199,7 +271,14 @@ extension RoomViewController {
     
     //关注按钮
     @IBAction func attentionButtonClick(_ sender: UIButton) {
-        
+        sender.isSelected = !sender.isSelected
+        sender.setTitle((sender.isSelected ? "已关注" : "关注"), for: .normal)
+        //改变数据库的内容
+        if sender.isSelected {//关注
+            anchorM?.insertIntoDB()
+        }else{//取消关注
+            anchorM?.deleteSqliteDB()
+        }
     }
 }
 

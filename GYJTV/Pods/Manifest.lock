@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.0.1)
   - Kingfisher (3.1.4)
+  - LFLiveKit (2.6)
   - MJRefresh (3.1.12)
   - ProtocolBuffers-Swift (3.0.6)
   - RxCocoa (3.1.0):
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
   - Kingfisher (~> 3.1.1)
+  - LFLiveKit
   - MJRefresh
   - ProtocolBuffers-Swift
   - RxCocoa
@@ -20,12 +22,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ProtocolBuffers-Swift: ee072e78456f2332a0b0f759f718b9c59443bbc8
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 91e3a36f0ac7aa3f708f58736efef8f71b4b9103
+PODFILE CHECKSUM: 42901177a843f62101d6ddb05790158dd7ed28c8
 
 COCOAPODS: 1.2.0.beta.1

@@ -15,6 +15,6 @@ pod 'RxCocoa'
 # OC库
 pod 'MJRefresh'
 pod 'SVProgressHUD'
-
+pod 'LFLiveKit'
 
 end
