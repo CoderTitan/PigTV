@@ -19,7 +19,7 @@ extension AttributeStrGenerator{
     class func generateJoinAndLevelRoom(_ userName : String, _ isJoin : Bool) -> NSAttributedString {
         let roomString = "\(userName)" + (isJoin ? "进入房间" : "离开房间")
         let roomAtt = NSMutableAttributedString(string: roomString)
-        roomAtt.addAttributes([NSForegroundColorAttributeName : UIColor.orange], range: NSRange(location: 0, length: userName.characters.count))
+        roomAtt.addAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], range: NSRange(location: 0, length: userName.characters.count))
         return roomAtt
     }
     
@@ -30,7 +30,7 @@ extension AttributeStrGenerator{
         
         //2.该名称为橘色
         let chatAttr = NSMutableAttributedString(string: chatMsg)
-        chatAttr.addAttributes([NSForegroundColorAttributeName : UIColor.orange], range: NSRange(location: 0, length: username.characters.count))
+        chatAttr.addAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], range: NSRange(location: 0, length: username.characters.count))
         // 3.将所有表情匹配出来, 并且换成对应的图片进行展示
         // 3.1.创建正则表达式匹配表情 我是主播[哈哈], [嘻嘻][嘻嘻] [123444534545235]
         let pattern = "\\[.*?\\]"
@@ -69,11 +69,11 @@ extension AttributeStrGenerator{
         let giftMessage = "\(username) 为主播赠送了 \(giftname) "
         //2.修改用户名称
         let giftAttribute = NSMutableAttributedString(string: giftMessage)
-        giftAttribute.addAttributes([NSForegroundColorAttributeName : UIColor.orange], range: NSRange(location: 0, length: username.characters.count))
+        giftAttribute.addAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], range: NSRange(location: 0, length: username.characters.count))
         
         //3.修改礼物名称
         let range = (giftMessage as NSString).range(of: giftname)
-        giftAttribute.addAttributes([NSForegroundColorAttributeName : UIColor.red], range: range)
+        giftAttribute.addAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], range: range)
         
         //4.最后拼接礼物图片
         guard let image = KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: gifturl) else {

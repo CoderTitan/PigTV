@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 private let kEdgeMargin : CGFloat = 8
 private let kHomeCellID : String = "homeCell"
@@ -65,7 +66,7 @@ extension AnchorViewController{
     
     @objc fileprivate func loadHeaderDataWithIndex() {
         //下拉刷新时,停止上拉加载
-        if collectionView.mj_footer.isRefreshing() {
+        if collectionView.mj_footer.isRefreshing {
             collectionView.mj_footer.endRefreshing()
         }
         collectionView.mj_header.beginRefreshing()
@@ -76,7 +77,7 @@ extension AnchorViewController{
     }
     @objc fileprivate func loadFooterDataWithIndex() {
         //上拉加载时,停止下拉刷新
-        if collectionView.mj_header.isRefreshing() {
+        if collectionView.mj_header.isRefreshing {
             collectionView.mj_header.endRefreshing()
         }
         collectionView.mj_footer.beginRefreshing()

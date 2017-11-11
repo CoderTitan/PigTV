@@ -33,19 +33,19 @@ class ProfileViewController: BaseProfileViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
-}
-
-//MARK: 界面数据处理
-extension ProfileViewController{
+    
     override func setupTableView() {
         super.setupTableView()
-        
-        automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         tableView.backgroundColor = UIColor(r: 245, g: 245, b: 245)
-        
         headerView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kHeaderViewHeight)
         tableView.tableHeaderView = headerView
     }
+
     
     override func loadProfileData() {
         super.loadProfileData()

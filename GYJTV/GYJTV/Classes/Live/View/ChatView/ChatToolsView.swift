@@ -44,7 +44,7 @@ class ChatToolsView: UIView , NibLoadable{
     }
 
     @IBAction func textFieldDidChanged(_ sender: UITextField) {
-        sendMsgBtn.isEnabled = sender.text!.characters.count != 0
+        sendMsgBtn.isEnabled = sender.text!.count != 0
     }
 }
 

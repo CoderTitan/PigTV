@@ -13,11 +13,9 @@ class BaseModel: NSObject {
     override init(){
         
     }
+    
     init(dic : [String : Any]) {
         super.init()
-        setValuesForKeys(dic)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
 }

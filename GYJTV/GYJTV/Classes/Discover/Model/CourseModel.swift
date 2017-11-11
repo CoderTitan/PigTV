@@ -14,4 +14,11 @@ class CourseModel: BaseModel {
     var picUrl : String = ""
     var linkUrl : String = ""
 
+    override init(dic: [String : Any]) {
+        super.init(dic: dic)
+        
+        name = dic["name"] as? String ?? ""
+        picUrl = dic["picUrl"] as? String ?? ""
+        linkUrl = dic["linkUrl"] as? String ?? ""
+    }
 }

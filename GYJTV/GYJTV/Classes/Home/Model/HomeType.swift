@@ -13,4 +13,10 @@ class HomeType: BaseModel {
     var title : String = ""
     var type : Int = 0
     
+    override init(dic : [String : Any]) {
+        super.init()
+        
+        title = dic["title"] as? String ?? ""
+        type = dic["type"] as? Int ?? 0
+    }
 }

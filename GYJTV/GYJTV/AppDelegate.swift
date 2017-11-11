@@ -48,7 +48,7 @@ extension AppDelegate{
         let naviBar = UINavigationBar.appearance()
         naviBar.barTintColor = UIColor.black
         naviBar.tintColor = UIColor.white
-        naviBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        naviBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         //设置状态栏及导航栏底部为透明的,默认为true
         let tabbar = UITabBar.appearance()

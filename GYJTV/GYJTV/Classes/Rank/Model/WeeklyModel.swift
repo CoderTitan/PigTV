@@ -15,4 +15,12 @@ class WeeklyModel: BaseModel {
     var nickname : String = ""
     var giftAppImg : String = ""
 
+    override init(dic: [String : Any]) {
+        super.init(dic: dic)
+        
+        giftNum = dic["giftNum"] as? Int ?? 0
+        giftName = dic["giftName"] as? String ?? ""
+        nickname = dic["nickname"] as? String ?? ""
+        giftAppImg = dic["giftAppImg"] as? String ?? ""
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 fileprivate let kCourseViewHeight : CGFloat = kScreenWidth * 0.4
 fileprivate let kTableViewRowHeight : CGFloat = kScreenWidth * 1.4
@@ -53,7 +54,11 @@ extension DiscoverViewController{
         navigationItem.titleView = title
     }
     fileprivate func setupViews(){
-        automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         tableView.rowHeight = kTableViewRowHeight
         tableView.tableHeaderView = courseView
         tableView.tableFooterView = setTableSectionFooterView()

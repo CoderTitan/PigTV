@@ -72,7 +72,8 @@ int ytcpsocket_connect(const char *host,int port,int timeout){
     FD_SET(sockfd, &fdwrite);
     tvSelect.tv_sec = timeout;
     tvSelect.tv_usec = 0;
-    int retval = select(sockfd + 1,NULL, &fdwrite, NULL, &tvSelect);
+//    int retval = select(sockfd + 1,NULL, &fdwrite, NULL, &tvSelect);
+    int retval = 0;
     if (retval<0) {
         close(sockfd);
         return -2;
@@ -104,7 +105,8 @@ int ytcpsocket_pull(int socketfd,char *data,int len,int timeout_sec){
         timeout.tv_sec = timeout_sec;
         FD_ZERO(&fdset);
         FD_SET(socketfd, &fdset);
-        int ret = select(socketfd+1, &fdset, NULL, NULL, &timeout);
+//        int ret = select(socketfd+1, &fdset, NULL, NULL, &timeout);
+        int ret = 0;
         if (ret<=0) {
             return ret; // select-call failed or timeout occurred (before anything was sent)
         }

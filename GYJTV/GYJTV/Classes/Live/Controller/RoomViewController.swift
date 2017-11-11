@@ -51,7 +51,7 @@ class RoomViewController: UIViewController ,Emitterable{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //0.设置UI界面
+        //0.设置UI界面x
         setupUI()
         
         //1.设置界面数据
@@ -162,8 +162,8 @@ extension RoomViewController{
         roomNumLabel.text = "房间号: " + roomModel.roomid
         onLineLabel.text = "\(roomModel.focus)"
         
-        let nickWidth = (nickNameLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : nickNameLabel.font], context: nil).size.width
-        let roomIDWidth = (roomNumLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : roomNumLabel.font], context: nil).size.width
+        let nickWidth = (nickNameLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [.font : nickNameLabel.font], context: nil).size.width
+        let roomIDWidth = (roomNumLabel.text! as NSString).boundingRect(with: CGSize(width: kScreenWidth / 3, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [.font : roomNumLabel.font], context: nil).size.width
         attenBtnConstraint.constant = nickWidth >= roomIDWidth ? nickWidth + 16 : roomIDWidth + 16
     }
     

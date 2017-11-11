@@ -68,7 +68,7 @@ extension ShadeView{
         }
     }
     
-    func dismissShadeView(){
+    @objc func dismissShadeView(){
         removeFromSuperview()
     }
 }

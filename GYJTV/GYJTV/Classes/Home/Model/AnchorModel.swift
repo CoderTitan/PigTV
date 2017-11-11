@@ -21,6 +21,18 @@ class AnchorModel: BaseModel {
     
     var isEvenIndex : Bool = false
 
+    override init(dic: [String : Any]) {
+        super.init(dic: dic)
+        
+        uid = dic["uid"] as? String ?? ""
+        roomid = dic["roomid"] as? String ?? ""
+        name = dic["name"] as? String ?? ""
+        pic51 = dic["pic51"] as? String ?? ""
+        pic74 = dic["pic74"] as? String ?? ""
+        live = dic["live"] as? Int ?? 0
+        push = dic["push"] as? Int ?? 0
+        focus = dic["focus"] as? Int ?? 0
+    }
 }
 
 //MARK: 数据库

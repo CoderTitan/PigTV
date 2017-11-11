@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 fileprivate let kDetailRankCell : String = "detailRank"
 
@@ -53,7 +54,7 @@ extension DetailRankViewController{
         tableView.mj_header.beginRefreshing()
     }
     
-    func loadTableViewData(){
+    @objc func loadTableViewData(){
         detailVM.loadDetailRankData(rankType) { 
             self.tableView.reloadData()
             self.tableView.mj_header.endRefreshing()

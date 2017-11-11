@@ -23,10 +23,8 @@ class BaseProfileViewController: UIViewController {
         setupTableView()
         loadProfileData()
     }
-}
-
-//MARK: 界面处理
-extension BaseProfileViewController{
+    
+    ///界面处理
     func setupTableView() {
         tableView.frame = view.bounds
         tableView.delegate = self
@@ -37,14 +35,13 @@ extension BaseProfileViewController{
         tableView.rowHeight = kTableRowHeight
         tableView.register(UINib(nibName: "ProfileViewCell", bundle: nil), forCellReuseIdentifier: kProfileCell)
     }
-}
-
-//MARK: 数据处理
-extension BaseProfileViewController{
+    
+    /// 数据处理
     func loadProfileData() {
         
     }
 }
+
 
 //MARK: UITableViewDataSource, UITableViewDelegate
 extension BaseProfileViewController : UITableViewDataSource, UITableViewDelegate{

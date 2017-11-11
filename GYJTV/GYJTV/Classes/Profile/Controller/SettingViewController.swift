@@ -21,10 +21,7 @@ class SettingViewController: BaseProfileViewController {
         return .lightContent
     }
 
-}
-
-//MARK: 数据处理
-extension SettingViewController{
+    ///数据处理
     override func loadProfileData() {
         super.loadProfileData()
         // 1.第一组数据
@@ -35,7 +32,7 @@ extension SettingViewController{
         section0Model.sectionArr.append(section0Item)
         let section1Item = SettingItemModel(icon: "", title: "移动流量提醒", "", .onswitch)
         section0Model.sectionArr.append(section1Item)
-        let section2Item = SettingItemModel(icon: "", title: "网络环境优化", "", .onswitch)
+        let section2Item = SettingItemModel(icon: "", title: "网络环境优化@objc ", "", .onswitch)
         section0Model.sectionArr.append(section2Item)
         
         settingArrar.append(section0Model)

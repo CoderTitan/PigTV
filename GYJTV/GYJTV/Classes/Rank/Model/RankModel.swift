@@ -13,4 +13,11 @@ class RankModel: BaseModel {
     var nickname : String = ""
     var avatar : String = ""
 
+    override init(dic: [String : Any]) {
+        super.init(dic: dic)
+        
+        isInLive = dic["isInLive"] as? Int ?? 0
+        nickname = dic["nickname"] as? String ?? ""
+        avatar = dic["avatar"] as? String ?? ""
+    }
 }

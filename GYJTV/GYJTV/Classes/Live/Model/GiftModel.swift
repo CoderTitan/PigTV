@@ -18,4 +18,12 @@ class GiftModel: BaseModel {
             }
         }
     }
+    
+    override init(dic : [String : Any]) {
+        super.init()
+        
+        img2 = dic["img2"] as? String ?? ""
+        coin = dic["coin"] as? Int ?? 0
+        subject = dic["subject"] as? String ?? ""
+    }
 }

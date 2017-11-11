@@ -17,14 +17,24 @@
 
 import Foundation
 
-public protocol GeneratedMessageProtocol: ProtocolBuffersMessage
-{
+public protocol GeneratedMessageProtocol: ProtocolBuffersMessage {
+    associatedtype BuilderType:GeneratedMessageBuilderProtocol
     static func parseFrom(data: Data) throws -> Self
     static func parseFrom(data: Data, extensionRegistry:ExtensionRegistry) throws -> Self
     static func parseFrom(inputStream:InputStream) throws -> Self
     static func parseFrom(inputStream:InputStream, extensionRegistry:ExtensionRegistry) throws -> Self
     static func parseFrom(codedInputStream:CodedInputStream) throws -> Self
     static func parseFrom(codedInputStream:CodedInputStream, extensionRegistry:ExtensionRegistry) throws -> Self
+    subscript(key: String) -> Any? { get }
+}
+
+public protocol GeneratedEnum:RawRepresentable, CustomDebugStringConvertible, CustomStringConvertible, Hashable {
+    func toString() -> String
+    static func fromString(_ str:String) throws -> Self
+}
+
+public protocol GeneratedMessageBuilderProtocol: ProtocolBuffersMessageBuilder {
+    subscript(key: String) -> Any? { get  set }
 }
 
 open class GeneratedMessage:AbstractProtocolBuffersMessage
@@ -115,15 +125,13 @@ open class GeneratedMessageBuilder:AbstractProtocolBuffersMessageBuilder
     }
 }
 
-extension GeneratedMessage:CustomDebugStringConvertible
-{
+extension GeneratedMessage:CustomDebugStringConvertible {
     public var debugDescription:String {
-            return description
+        return description
     }
 }
 
-extension GeneratedMessage:CustomStringConvertible
-{
+extension GeneratedMessage:CustomStringConvertible {
     public var description:String {
         get {
             var output:String = ""
@@ -133,8 +141,7 @@ extension GeneratedMessage:CustomStringConvertible
     }
 }
 
-extension GeneratedMessageBuilder:CustomDebugStringConvertible
-{
+extension GeneratedMessageBuilder:CustomDebugStringConvertible {
     public var debugDescription:String {
         return internalGetResult.description
     }
