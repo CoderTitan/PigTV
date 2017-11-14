@@ -58,10 +58,10 @@ extension FocusViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dismissScreenListPlayView()
         let roomVC = RoomViewController()
         let anchorModel = focusVM.anchorModels[indexPath.row]
         roomVC.anchorM = anchorModel
-//        roomVC.isPush = anchorModel.push
         roomVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(roomVC, animated: true)
     }

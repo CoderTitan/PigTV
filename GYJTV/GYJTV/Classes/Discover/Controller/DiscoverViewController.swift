@@ -128,6 +128,7 @@ extension DiscoverViewController : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kTableViewCellId, for: indexPath) as! DiscoverTableCell
         cell.cellDidSelected = {(anchor : AnchorModel) in
+            self.dismissScreenListPlayView()
             let room = RoomViewController()
             room.anchorM = anchor
             self.navigationController?.pushViewController(room, animated: true)

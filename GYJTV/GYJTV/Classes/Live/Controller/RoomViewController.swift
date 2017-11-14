@@ -64,6 +64,7 @@ class RoomViewController: UIViewController ,Emitterable{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        dismissScreenListPlayView()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -231,7 +232,13 @@ extension RoomViewController{
 // MARK:- 事件监听
 extension RoomViewController {
     @IBAction func exitBtnClick() {
-        _ = navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        
+        guard let roomModel = anchorM else { return }
+        let rect = roomModel.push == 1 ? CGRect(x: (kScreenWidth - 225) / 2, y: (kScreenHeight - 125) / 2, width: 225, height: 125) : CGRect(x: (kScreenWidth - 110) / 2, y: (kScreenHeight - 200) / 2, width: 110, height: 200)
+        let playView = RoomPlayView(frame: rect, livingUrl: roomVM.liveUrl, anchorM: roomModel)
+        playView.showPlayView()
     }
     
     @IBAction func bottomMenuClick(_ sender: UIButton) {

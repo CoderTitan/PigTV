@@ -32,8 +32,6 @@ extension RoomViewModel{
             //4.q请求直播地址
             self.loadOnLiveUrl(urlString: rurl, complection)
         }
-        
-
     }
     
     fileprivate func loadOnLiveUrl(urlString : String, _ complection : @escaping () -> ()){

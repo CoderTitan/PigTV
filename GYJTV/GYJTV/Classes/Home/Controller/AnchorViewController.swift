@@ -109,6 +109,7 @@ extension AnchorViewController : UICollectionViewDelegate,UICollectionViewDataSo
         return homeCell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        dismissScreenListPlayView()
         let roomVc = RoomViewController()
         roomVc.anchorM = homeView.anchorModels[indexPath.item]
         navigationController?.pushViewController(roomVc, animated: true)
